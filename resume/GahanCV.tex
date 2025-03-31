@@ -45,12 +45,17 @@
     }
 \begin{document}
 
+% AI/ML - 0
+% DevOps - 1
+% PhD - 2
+\def\profile{0}
+
 %----------------------------------------------------------------------------------------
 %	OBJECTIVE
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{OBJECTIVE}
-{With over 6.5+ years of experience as a Senior Software Engineer, currently working at AMD India Pvt Ltd. for managing AI/ML workload execution on HPC device (GPU). I possess a strong command over Python, HPC, UEFI Firmware, and DevOps, complemented by a thorough understanding of their workflows and architectures. My enthusiasm for open-source contribution and knowledge dissemination reflects my commitment to being a philanthropist in the realm of technology. I am eager to channel my expertise into the architectural design of optimized quantum machine learning algorithms tailored for multi-programming environments, as well as to explore the synergies between these cutting-edge technologies and DevOps practices.}
+{With over 7+ years of experience as a Senior Software Engineer, currently working at AMD India Pvt Ltd. for managing AI/ML workload execution on HPC device (GPU). I possess a strong command over Python, HPC, UEFI Firmware, and DevOps, complemented by a thorough understanding of their workflows and architectures. My enthusiasm for open-source contribution and knowledge dissemination reflects my commitment to being a philanthropist in the realm of technology. I am eager to channel my expertise into the architectural design of optimized quantum machine learning algorithms tailored for multi-programming environments, as well as to explore the synergies between these cutting-edge technologies and DevOps practices.}
 
 \end{rSection}
 
@@ -65,10 +70,12 @@
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 
+% PROFILE 0
+\if\profile0
 Languages & Python, C, C++, Shell Scripting, SQL, LaTeX, YAML 
 \\
 Frameworks & Tensorflow, Pytorch, TensorRT, Pytest, Edk2, PyCUDA, Pandas, 
-\\ & UEFI, Selenium 
+\\ & UEFI, Selenium, Redfish
 \\
 Architecture Design & Parallel Programming System Architecture, ROCm, HIP Programming
 \\
@@ -79,6 +86,25 @@ Cloud Technologies & GCP, AWS, Azure, Digital Ocean, JFrog Artifactory, TeamCity
 \\ & JIRA, AWS Sage Maker
 \\
 System Level IP & RAS, Compute Paritioning, Boot time optimization
+\\
+\fi
+
+%  PROFILE 1
+\if\profile1
+Languages & Python, Shell Scripting, SQL, LaTeX, YAML 
+\\
+Frameworks & Pytorch, Pytest, Edk2, PyCUDA, Pandas, UEFI, Selenium, Redfish
+\\
+Architecture Design & Parallel Programming System Architecture, ROCm, HIP Programming
+\\
+Tools and Services & GitHub Actions, Jenkins, Restful APIs, Teamcity, Terraform,
+\\ & Docker, Docker Compose, Jenkins, TeamCity, GiT 
+\\
+Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage Maker, 
+\\ & AWS Lambda, AWS Cloudfront, ECR, ECS, EKS, JFrog Artifactory
+\\ & GCP, Azure, Digital Ocean
+    
+\fi
 
 \end{tabular}
 
@@ -95,13 +121,20 @@ System Level IP & RAS, Compute Paritioning, Boot time optimization
 
 {\bf Senior System Software Designer at AMD India Pvt Ltd} \hfill {Mar 2024 - Present }
 \begin{itemize}
+\if\profile1
+    \item Workload execution pool management for cross geo platforms for CI/CD on Jenkins
+    \item Release management of ROCm builds for production, non-production and various other categories with matrix of configuration of OS and toolchain
+    \item Docker orchestration on enterprise registry
+    \item Platform provisioning migration with terraform
+\fi
     \item Conducting functional and performance benchmarking of HPC devices (GPUs) by developing and executing comprehensive test suites aligned with industry standards.
-    \item Develop optimal GPU performance criteria based on thermal limits, power consumption, memory usage, and core utilization.
-    \item Incorporating state-of-the-art industry standards design models, implementing and utilizing frameworks like TensorFlow, PyTorch, and various matrix operations.
+    \item Develop Load balanced optimal GPU performance criteria with thermal limits, power consumption, memory usage, and core utilization.
+    \item Incorporating state-of-the-art industry standards design models, implementing and utilizing frameworks like TensorFlow, PyTorch, and GEMM operations.
     \item Provided precise steps for RAS (Reliability, Availability, and Serviceability) injection on MI2XX and MI3XX platforms.
     \item Designed precise steps for range of firmware capabilities, including partitioning, System Management Interface (SMI), HIP profiling, and parallel execution.
+\if\profile0
     \item Collaborating with a diverse team of engineers and researchers.
-    
+\fi
 \end{itemize}
 
 {\textbf{Senior Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Oct 2023 - Mar 2024}
@@ -109,7 +142,10 @@ System Level IP & RAS, Compute Paritioning, Boot time optimization
     \item Platform provisioning and infrastructure setup for mass automation of HPC products.
     \item Platform Orchestration Layer design of Universal Scalable Firmware (USF).
     \item Harnessing Azure OpenAI Generative AI adaptation for Firmware Development Productivity for assessment code review, guidance, basic security checks of code.
-    % \item Terraform deployments for environment for on-the-go dev environment over kubernetes cluster. (including setting up a node platform from scratch)
+
+\if\profile1
+    \item Terraform deployments for environment for on-the-go dev environment over kubernetes cluster. (including setting up a node platform from scratch)
+\fi
     \item GitHub Action and JIRA integration for managing Continuous deployment and test through CloudBees Jenkins with baremetal and docker nodes.
     \item Enhancing firmware-based boot-time performance for notebook devices.
 \end{itemize}
@@ -129,22 +165,28 @@ System Level IP & RAS, Compute Paritioning, Boot time optimization
     \item BIOS Firmware Development for Client products with the framework EDK2, UEFI Firmware, Involvement with assessing new debugging solutions and OpenBoard Package
 \end{itemize}
 
-% {\textbf{Teaching Assistantship at Nirma University}}  \hfill {Aug 2018 - May 2019}
-% \begin{itemize}
-%     \item Data Mining and Visulaization
-% \end{itemize}
+\if\profile2
+{\textbf{Teaching Assistantship at Nirma University}}  \hfill {Aug 2018 - May 2019}
+\begin{itemize}
+    \item Data Mining and Visulaization
+\end{itemize}
+\fi
 
-% {\textbf{Software Developer at Quixom Technology}}   \hfill {Jul 2017 - Apr 2018}
-% \begin{itemize}
-%     \item SaaS-Employee management system (chat, surveys, benchmark, analytics...) and Restful API Development; socket programming in python to receive continuous data from IoT device and display chunks of data meaningfully, web portal for rendering dynamic menu content in Kodi
-% \end{itemize}
+\if\profile1
+{\textbf{Software Developer at Quixom Technology}}   \hfill {Jul 2017 - Apr 2018}
+\begin{itemize}
+    \item SaaS-Employee management system (chat, surveys, benchmark, analytics...) and Restful API Development
+    \item Socket programming in python to receive continuous data from IoT device and display chunks of data meaningfully
+    \item web portal for rendering dynamic menu content for Streaming service
+\end{itemize}
 
-% {\textbf{Freelance Developer}}   \hfill {2015 - Apr 2019}
-% \begin{itemize}
-%     \item Cloud solution for Data gathering and webscraping with selenium and GCP.
-%     \item Designing template and banners for High resolution prints
-%     \item Inventory management system for Book store with Django.
-% \end{itemize}
+{\textbf{Freelance Full-stack Developer}}   \hfill {2015 - Apr 2019}
+\begin{itemize}
+    \item Cloud solution for Data gathering and webscraping with selenium and GCP.
+    \item Designing template and banners for High resolution prints
+    \item Inventory management system for Book store with Django.
+\end{itemize}
+\fi
 
 \end{rSection}
 
@@ -167,8 +209,9 @@ System Level IP & RAS, Compute Paritioning, Boot time optimization
 
 \begin{itemize}
     \item Remote BMC and BIOS Firmware Flashing
-    \item OS Deployment from artifactory
+    \item OS Deployment from artifactory through Jenkins Pipeline
     \item Boot to EFI Shell and OS
+    \item Configuration of Initial system setup with Jenkins pipeline steps with Baseboard management controller RedFish API
 \end{itemize}
 
 \textbf{Universal Scalable Firmware} \hfill {2022 - 2024} \\
