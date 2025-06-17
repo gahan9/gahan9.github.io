@@ -296,7 +296,7 @@ a:focus {
 }
 
 .slide__name {
-	font-size: 15vw;
+	font-size: 13vw;
 	line-height: 0.8;
 	margin: 0;
 	padding: 0 0 0 5vw;
@@ -309,6 +309,17 @@ a:focus {
 .slide__title,
 .slide__date {
 	text-align: right;
+}
+
+.slide__row {
+  display: flex;
+  align-items: flex-start; /* or center, as needed */
+  gap: 2em; /* space between columns */
+}
+
+.slide__content,
+.slide__side {
+  flex: 1 1 0;
 }
 
 .slide__title {
