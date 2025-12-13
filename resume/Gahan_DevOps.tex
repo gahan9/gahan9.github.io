@@ -1,0 +1,243 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.5 in,top=0.4in,right=0.5 in,bottom=0.4in]{geometry} % Document margins
+\usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage{hyperref}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Gahan Saraiya} % Your name
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{ 
+  \faPhone \ +91 7359508173 \\
+  \faEnvelope \ \href{mailto: gahansaraiya@gmail.com}{gahansaraiya@gmail.com} \\  
+  \faLinkedin \ \href{https://www.linkedin.com/in/gahan-saraiya/}{linkedin.com/in/gahan-saraiya} \\ \faGithub \   \href{https://github.com/gahan9/}{github.com/gahan9} 
+}  % Your phone number and email
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+    }
+\begin{document}
+
+% DevOps/MLOps Resume - ATS Optimized
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROFESSIONAL SUMMARY}
+Senior DevOps and MLOps Engineer with 8+ years of experience designing, implementing, and managing scalable cloud infrastructure, CI/CD pipelines, and machine learning operations. Proven expertise in containerization, Infrastructure as Code (IaC), multi-cloud platforms (AWS, Azure, GCP), Kubernetes orchestration, and automated ML model deployment pipelines. Strong background in Python automation, Docker containerization, Terraform, Jenkins/GitHub Actions CI/CD, and observability solutions. Experienced in managing AI/ML workload execution on HPC devices, implementing MLOps practices for model training, deployment, and monitoring at scale.
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{TECHNICAL SKILLS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Programming Languages & Python, Bash Shell Scripting, SQL, YAML, JSON, PowerShell
+\\
+DevOps \& CI/CD Tools & Jenkins, GitHub Actions, GitLab CI/CD, Terraform, Ansible, Docker, 
+\\ & Docker Compose, Kubernetes (K8s), Helm, Git, TeamCity, JFrog Artifactory
+\\
+Cloud Platforms & AWS (EC2, S3, CloudWatch, VPC, Lambda, CloudFront, ECR, ECS, EKS, 
+\\ & SageMaker, IAM, Route53), Azure (DevOps, OpenAI, Container Registry), 
+\\ & GCP (Compute Engine, Cloud Storage, Cloud Functions), Digital Ocean
+\\
+MLOps \& ML Frameworks & PyTorch, TensorFlow, MLflow, Model Serving, Model Deployment, 
+\\ & Model Monitoring, AWS SageMaker, MLOps Pipelines, Model Versioning
+\\
+Infrastructure \& Monitoring & Infrastructure as Code (IaC), Container Orchestration, 
+\\ & Cloud Architecture, System Monitoring, Logging, Observability, 
+\\ & Performance Optimization, Auto-scaling, Load Balancing
+\\
+APIs \& Services & RESTful APIs, Microservices Architecture, API Gateway, 
+\\ & Service Mesh, Redfish API, Selenium Automation
+\end{tabular}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Experience SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROFESSIONAL EXPERIENCE}
+
+{\bf Senior System Software Designer at AMD India Pvt Ltd} \hfill {Mar 2024 - Present }
+\begin{itemize}
+    \item Architected and managed distributed workload execution pools across multiple geographic regions, implementing CI/CD pipelines on Jenkins for automated build, test, and deployment workflows
+    \item Led release management operations for ROCm builds across production, staging, and development environments, managing complex matrix configurations of operating systems and toolchains
+    \item Designed and implemented Docker containerization strategies with enterprise container registry (JFrog Artifactory), optimizing image builds and deployment pipelines
+    \item Migrated platform provisioning infrastructure to Infrastructure as Code (IaC) using Terraform, enabling automated infrastructure deployment and reducing manual configuration errors by 70\%
+    \item Developed and maintained MLOps pipelines for AI/ML workload execution on HPC devices (GPUs), integrating automated testing, model versioning, and deployment workflows
+    \item Implemented Kubernetes-based container orchestration solutions for managing GPU workloads, optimizing resource allocation and ensuring high availability
+    \item Created automated monitoring and alerting systems for infrastructure health, performance metrics, and deployment status using CloudWatch and custom observability tools
+    \item Conducted functional and performance benchmarking of HPC devices (GPUs) by developing and executing comprehensive test suites aligned with industry standards
+\end{itemize}
+
+{\textbf{Senior Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Oct 2023 - Mar 2024}
+\begin{itemize}
+    \item Designed and implemented platform provisioning and infrastructure automation for large-scale HPC product deployments, reducing manual setup time by 70\%
+    \item Architected Platform Orchestration Layer for Universal Scalable Firmware (USF), enabling automated configuration management and deployment workflows
+    \item Built complete Infrastructure as Code (IaC) solution using Terraform for on-demand development environments on Kubernetes clusters, including node provisioning from scratch
+    \item Implemented Kubernetes-based container orchestration for development environments, enabling rapid scaling and resource optimization with automated node management, pod scheduling, and resource allocation policies
+    \item Integrated Azure OpenAI services for automated code review, security vulnerability scanning, and code quality assessment, improving development productivity
+    \item Integrated GitHub Actions and JIRA for end-to-end CI/CD pipeline management, implementing continuous deployment and automated testing through CloudBees Jenkins
+    \item Managed hybrid Jenkins infrastructure with bare-metal and Docker containerized nodes, optimizing build performance and resource utilization
+\end{itemize}
+ 
+{\textbf{Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Jun 2020 - Sept 2023}
+\begin{itemize}
+    \item Led next-generation client platform architecture design at USF POL, owning domains for Automation Framework, Platform Provisioning, Applied Generative AI, and Quantum Firmware Design
+    \item Managed end-to-end Software Development Life Cycle (SDLC), including licensing, legal compliance, IP planning, code security, and static code analysis integration
+    \item Configured and maintained Jenkins CI/CD pipelines with security scanning tools (Snyk, Coverity), implementing automated security vulnerability detection in build processes
+    \item Enhanced GitHub code review automation with Python packaging validation, linting (Bandit), and Flask-based Jenkins pipeline integration for improved code quality
+    \item Implemented automated testing frameworks for firmware functional validation using TeamCity, reducing manual testing effort by 60\%
+    \item Built and maintained continuous integration pipelines for automated build, test, and deployment workflows
+    \item Established DevSecOps practices by integrating security scanning, code analysis, and compliance checks into CI/CD pipelines
+    \item Mentored team members on DevOps best practices, automation frameworks, and CI/CD pipeline development
+\end{itemize}
+
+{\textbf{Software Developer at Quixom Technology}}   \hfill {Jul 2017 - Apr 2018}
+\begin{itemize}
+    \item Developed SaaS-based employee management system with RESTful API architecture, implementing microservices design patterns
+    \item Built real-time data processing pipelines using Python socket programming for continuous IoT device data ingestion and analytics
+    \item Designed and deployed cross-platform streaming service with Django REST Framework (DRF) backend and web portal frontend
+    \item Implemented automated data processing workflows for handling large-scale data streams from IoT devices
+\end{itemize}
+
+{\textbf{Freelance Full-stack Developer}}   \hfill {2015 - Apr 2019}
+\begin{itemize}
+    \item Designed and deployed cloud-based data gathering and web scraping solutions on Google Cloud Platform (GCP) using Selenium automation
+    \item Built scalable data processing pipelines for automated data collection, storage, and analysis
+    \item Developed inventory management system using Django framework with automated workflows for stock management and reporting
+    \item Implemented cloud infrastructure solutions for high-availability web applications
+\end{itemize}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%     PROJECT SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{KEY PROJECTS}
+{\bf GPU Performance Analysis and MLOps Pipeline for Data Center Workloads} \hfill {2024 - Present}\\
+Designed and implemented end-to-end MLOps pipelines for automated ML model training, deployment, and monitoring on GPU clusters. Built Docker-based containerization strategies and Terraform IaC solutions for automated GPU cluster provisioning. Engineered comprehensive monitoring solutions for GPU telemetry using System Management Interface (SMI). Integrated automated testing, model validation, and deployment workflows into Jenkins pipelines for continuous ML model delivery.
+
+{\bf MLOps Pipeline for Generative AI Code Review Automation} \hfill {2023 - 2024}\\
+Built automated MLOps pipelines integrating Azure OpenAI (GPT-3.5, GPT-4) for intelligent code analysis and review automation. Integrated AI-powered code review into Jenkins CI/CD pipelines, enabling automated code quality checks and security vulnerability detection. Enhanced security posture by automating code security scanning, vulnerability assessment, and compliance checking, reducing manual code review time by 50\%.
+
+\textbf{Infrastructure Automation and Platform Provisioning} \hfill {2023 - 2024}\\
+Developed Terraform-based IaC solutions for automated infrastructure provisioning and configuration management. Built end-to-end Jenkins pipelines for automated remote BMC and BIOS firmware flashing, reducing deployment time by 75\%. Integrated JFrog Artifactory with Jenkins pipelines for automated OS image deployment and version management. Implemented automated system configuration using Redfish API for Baseboard Management Controller (BMC) operations.
+
+\textbf{DevOps Automation Framework for Firmware Development}  \hfill {2020 - Present} \\
+Designed and implemented fully automated system configuration framework, eliminating manual BIOS configuration intervention for thousands of devices. Established comprehensive DevSecOps practices including legal compliance automation, security scanning, licensing validation, and static code analysis in CI/CD pipelines. Built end-to-end continuous deployment and testing pipelines using Jenkins with tox configurations. Developed and maintained open-source automation tools: \href{https://github.com/intel/xml-cli}{https://github.com/intel/xml-cli}
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{EDUCATION}
+
+{\bf M.Tech Computer Science} \hfill {Jul 2018 - Jun 2020 }\\
+Nirma University, GPA: 8.49
+
+{\bf B.E. in Computer Science and Engineering} \hfill {Aug 2013 - Apr 2017 }\\
+Gujarat Technological University, CGPA: 8.08
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%     Certifications
+%----------------------------------------------------------------------------------------
+\begin{rSection}{CERTIFICATIONS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+2025 & Essential Terraform in AWS - LinkedIn Learning
+\\
+2025 & AMD ROCm Star - Application Developer - AMD Adaptive Computing Training Team
+\\
+2025 & On-Device AI - Qualcomm \& DeepLearning.ai
+\\
+2021 & Product Assurance and Security Yellow Belt - Software - Intel
+\\
+2020 & Machine Learning Specialization (5 courses) - Coursera (DeepLearning.ai)
+
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%     Achievements
+%----------------------------------------------------------------------------------------
+\begin{rSection}{ACHIEVEMENTS \& CONTRIBUTIONS}
+
+\begin{itemize}
+    \item Presented Firmware Configuration at UEFI Developers Conference \& Plugfest (2023)
+    \item Tech Talk on Harnessing Multiprogramming across CPU, GPU and QPU (2023)
+    \item Expert Lecture on CUDA Programming (2021)
+    \item 4000+ reputation on Stack Overflow (2019-Present)
+    \item Rank \#1 for Python challenges on HackerRank (2018)
+    \item Rank \#112 from 200,000+ participants in Techgig's National Coding Contest (2018)
+\end{itemize}
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%     Publications
+%----------------------------------------------------------------------------------------
+\begin{rSection}{PUBLICATIONS \& PRESENTATIONS}
+
+\begin{itemize}
+    \item \href{https://youtube.com/playlist?list=PLWyBQeJgIuzDFELUK9ineNkOr9LuYatkR&si=mUVeIkLFK5gzyZa7}{HIP Parallel Programming with ROCm} Lecture Series, YouTube (2025)
+    \item \href{https://youtube.com/playlist?list=PLWyBQeJgIuzC6oN8AihmSMkgheX9TLDaW&si=HAOmHXKP4KdsAzPX}{Beyond the Power | Data Center \& BMC} Lecture Series, YouTube (2025)
+    \item \href{https://www.youtube.com/playlist?list=PLWyBQeJgIuzD2o9ZVw5oI-P2fX4uyNKZA}{System Design for Parallel Programming} Lecture Series, YouTube (2025)
+    \item \href{https://uefi.org/sites/default/files/resources/Firmware%20Configuration%20%E2%80%93%20Past%2C%20Present%2C%20and%20Future_Zimmer.pdf}{Firmware Configuration – Past, Present, and Future}, UEFI DevCon 2023
+\end{itemize}
+
+\end{rSection}
+
+\end{document}
+
