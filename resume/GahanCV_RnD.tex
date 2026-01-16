@@ -1,0 +1,392 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage{hyperref}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Gahan Saraiya} % Your name
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{ 
+  \faPhone \ +91 7359508173 \\
+  \faEnvelope \ \href{mailto: gahansaraiya@gmail.com}{gahansaraiya@gmail.com} \\  
+  \faLinkedin \ \href{https://www.linkedin.com/in/gahan-saraiya/}{linkedin.com/in/gahan-saraiya} \\ \faGithub \   \href{https://github.com/gahan9/}{github.com/gahan9} 
+}  % Your phone number and email
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+    }
+\begin{document}
+
+% AI/ML - 0
+% DevOps - 1
+% PhD - 2
+\def\profile{0}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{OBJECTIVE}
+{High Performance Computing (HPC) Development Engineer with 8+ years of Research and Development experience in system software, GPU computing, and distributed systems architecture. Currently at AMD India Pvt Ltd., specializing in performance optimization and AI/ML workload execution on HPC accelerators (GPUs). Deep expertise in Python, modern C++, and Bash scripting for large-scale on-prem and cloud infrastructure deployments. Strong background in operating systems internals, computer networks, and high-performance applications across heterogeneous computing environments comprising CPUs, GPUs, and accelerators. Proven track record in deploying and optimizing Deep-Learning frameworks including TensorFlow and PyTorch on enterprise HPC clusters. Passionate about open-source contribution and advancing the state-of-the-art in parallel computing and distributed systems.}
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{TECHNICAL SKILLS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+
+% PROFILE 0
+\if\profile0
+Programming Languages & \textbf{C++}, C, \textbf{Python}, \textbf{Bash/Shell Scripting}, SQL
+\\
+HPC \& GPU Computing & ROCm, \textbf{HIP Programming}, \textbf{CUDA}, PyCUDA, OpenCL, MPI, OpenMP,
+\\ & GPU Profiling, Memory Optimization, Kernel Development
+\\
+Deep Learning Frameworks & \textbf{TensorFlow}, \textbf{PyTorch}, TensorRT, ONNX Runtime,
+\\ & Large-Scale Model Training, Distributed Training
+\\
+Distributed Systems & CPU/GPU/Accelerator Architecture, Parallel Programming,
+\\ & High-Performance Networks, InfiniBand, RDMA, MPI
+\\
+Operating Systems & Linux Internals, Kernel Development, UEFI/BIOS Firmware,
+\\ & System Performance Tuning, Memory Management
+\\
+Cloud \& Infrastructure & AWS (EC2, S3, SageMaker), GCP, Azure, Kubernetes, Docker,
+\\ & Terraform, Large-Scale On-Prem HPC Clusters
+\\
+CI/CD \& DevOps & Jenkins, GitHub Actions, TeamCity, JFrog Artifactory
+\\
+System Level IP & RAS (Reliability, Availability, Serviceability), Compute Partitioning,
+\\ & Boot-time Optimization, CPER, SMI
+\\
+\fi
+
+%  PROFILE 1
+\if\profile1
+Languages & Python, Shell Scripting, SQL, LaTeX, YAML 
+\\
+Frameworks & Pytorch, Pytest, Edk2, PyCUDA, Pandas, UEFI, Selenium, Redfish
+\\
+Architecture Design & Parallel Programming System Architecture, ROCm, HIP Programming
+\\
+Tools and Services & GitHub Actions, Jenkins, Restful APIs, Teamcity, Terraform,
+\\ & Docker, Docker Compose, Jenkins, TeamCity, GiT 
+\\
+Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage Maker, 
+\\ & AWS Lambda, AWS Cloudfront, ECR, ECS, EKS, JFrog Artifactory
+\\ & GCP, Azure, Digital Ocean
+    
+\fi
+
+\end{tabular}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Experience SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+
+{\bf Senior System Software Designer at AMD India Pvt Ltd} \hfill {Mar 2024 - Present }
+\begin{itemize}
+\if\profile1
+    \item Workload execution pool management for cross geo platforms for CI/CD on Jenkins
+    \item Release management of ROCm builds for production, non-production and various other categories with matrix of configuration of OS and toolchain
+    \item Docker orchestration on enterprise registry
+    \item Platform provisioning migration with terraform
+\fi
+    \item \textbf{R\&D Leadership}: Spearheading research and development of high-performance computing solutions for next-generation AMD GPU accelerators (MI2XX, MI3XX series).
+    \item \textbf{Performance Engineering}: Architecting and implementing comprehensive GPU benchmarking frameworks using \textbf{modern C++} and \textbf{Python} for functional and performance validation of HPC devices.
+    \item \textbf{Deep Learning Framework Optimization}: Deploying and optimizing \textbf{PyTorch} workloads on large-scale GPU clusters, implementing GEMM operations and distributed training pipelines.
+    \item \textbf{Distributed Systems Architecture}: Designing workload orchestration systems across heterogeneous computing environments comprising \textbf{CPUs, GPUs, and accelerators}.
+    \item \textbf{System-Level Optimization}: Developing load-balanced GPU performance criteria with thermal management, power consumption profiling, memory optimization, and core utilization metrics.
+    \item \textbf{Operating Systems Expertise}: Implementing RAS (Reliability, Availability, Serviceability) injection mechanisms and System Management Interface (SMI) profiling.
+    \item \textbf{HIP/ROCm Development}: Designing firmware capabilities including compute partitioning, HIP kernel profiling, and parallel execution strategies.
+\if\profile0
+    \item Collaborating with cross-functional R\&D teams of engineers and researchers on cutting-edge HPC solutions.
+\fi
+\end{itemize}
+
+{\textbf{Senior Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Oct 2023 - Mar 2024}
+\begin{itemize}
+    \item \textbf{HPC Infrastructure R\&D}: Platform provisioning and infrastructure design for mass automation of high-performance computing products.
+    \item \textbf{System Architecture Design}: Led Platform Orchestration Layer architecture for Universal Scalable Firmware (USF) using \textbf{modern C++} and \textbf{Python}.
+    \item \textbf{AI/ML Integration}: Implemented Azure OpenAI Generative AI solutions for automated code review and security analysis.
+\if\profile1
+    \item Terraform deployments for environment for on-the-go dev environment over kubernetes cluster. (including setting up a node platform from scratch)
+\fi
+    \item \textbf{Large-Scale Infrastructure}: Designed CI/CD pipelines with GitHub Actions and Jenkins for distributed build systems across baremetal and containerized environments.
+    \item \textbf{Operating System Optimization}: Enhanced firmware-based boot-time performance through deep OS-level optimizations.
+\end{itemize}
+ 
+{\textbf{Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Jun 2020 - Sept 2023}
+\begin{itemize}
+    \item \textbf{R\&D Technical Lead}: Spearheaded next-generation platform architecture design, owning domains including Automation Framework, Platform Provisioning, and Quantum Firmware Design.
+    \item \textbf{C++ and Python Development}: Developed high-performance firmware validation tools using \textbf{Python scripting} for large-scale automated testing.
+    \item \textbf{Distributed Systems}: Managed end-to-end SDLC for distributed firmware systems including security analysis (Snyk, Coverity) and static code analysis.
+    \item \textbf{Scripting \& Automation}: Developed \textbf{Bash} and \textbf{Python} scripts for automated testing pipelines, GitHub hooks, and CI/CD integration with Jenkins/TeamCity.
+    \item \textbf{Operating Systems Expertise}: Deep involvement in UEFI/BIOS firmware development and system-level debugging.
+    \item Mentoring junior engineers on HPC concepts, parallel programming, and modern C++ best practices.
+\end{itemize}
+
+{\textbf{Firmware Engineer Intern at Intel Technology India Pvt Ltd}}  \hfill {Jun 2019 - May 2020}
+\begin{itemize}
+    \item \textbf{Low-Level Systems Development}: BIOS/UEFI Firmware development using EDK2 framework with \textbf{C} and \textbf{C++} for client products.
+    \item \textbf{Operating Systems}: Deep understanding of boot processes, memory management, and hardware abstraction layers.
+\end{itemize}
+
+% \if\profile2
+{\textbf{Teaching Assistantship at Nirma University}}  \hfill {Aug 2018 - May 2019}
+\begin{itemize}
+    \item Data Mining and Visulaization
+\end{itemize}
+% \fi
+
+% \if\profile1
+{\textbf{Software Developer at Quixom Technology}}   \hfill {Jul 2017 - Apr 2018}
+\begin{itemize}
+    \item SaaS-Employee management system (chat, surveys, benchmark, analytics...) and Restful API Development
+    \item Socket programming in python to receive continuous data from IoT device and display chunks of data meaningfully
+    \item Streaming service with Web-Portal, DRF and Kodi across platforms
+\end{itemize}
+
+{\textbf{Freelance Full-stack Developer}}   \hfill {2015 - Apr 2019}
+\begin{itemize}
+    \item Cloud solution for Data gathering and webscraping with selenium and GCP.
+    \item Designing template and banners for High resolution prints
+    \item Inventory management system for Book store with Django.
+\end{itemize}
+% \fi
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%     PROJECT SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Projects}
+
+% === 2024 Projects ===
+{\bf GPU Performance Analysis for Data Center Workloads (R\&D)} \hfill {2024 - Present}\\
+\textbf{Description}: High-Performance Computing research for in-band GPU profiling on distributed systems
+
+\begin{itemize}
+    \item \textbf{HPC Profiling Architecture:} Designed and implemented robust in-band profiling mechanisms using \textbf{C++} and \textbf{Python} for comprehensive GPU telemetry across large-scale data center deployments.
+    \item \textbf{Distributed Workload Orchestration:} Developed dynamic workload orchestration systems for heterogeneous computing environments (\textbf{CPUs, GPUs, accelerators}) with real-time resource adaptation.
+    \item \textbf{Deep Learning Workload Analysis:} Profiled \textbf{TensorFlow} and \textbf{PyTorch} training workloads on multi-GPU clusters, analyzing CUDA/HIP kernel performance and memory bandwidth utilization.
+    \item \textbf{Operating System Integration:} Implemented low-level system interfaces for hardware metric collection including GPU temperature, power consumption, and memory management through SMI.
+    \item \textbf{Performance Optimization:} Developed kernel profiling tools using \textbf{modern C++} for call stack timing analysis, identifying bottlenecks in high-performance applications.
+\end{itemize}
+
+{\bf Intelligent Defect Triage System using RAG \& LangGraph (R\&D)} \hfill {2024 - Present}\\
+\textbf{Description}: AI-powered defect analysis and real-time triage prediction for enterprise HPC validation workflows
+
+\begin{itemize}
+    \item \textbf{RAG Pipeline Architecture:} Designed and implemented a Retrieval-Augmented Generation (RAG) pipeline using \textbf{LangGraph} and \textbf{Python} for automated JIRA dashboard defect analysis.
+    \item \textbf{Defect Trend Analysis:} Developed ML models to identify defect root cause patterns, rejection reason trends, and domain-based cluster classification across HPC validation datasets.
+    \item \textbf{Real-Time Triage Prediction:} Built intelligent triage prediction system leveraging contextual availability (setup/infra issues, standard system call failures, known solutions) to accelerate defect resolution.
+    \item \textbf{LLM Integration:} Integrated large language models with \textbf{PyTorch} embeddings for semantic similarity search and context-aware defect categorization.
+    \item \textbf{Enterprise Scalability:} Deployed solution on large-scale on-prem infrastructure supporting distributed teams across multiple validation clusters.
+\end{itemize}
+
+% === 2023 Projects ===
+{\bf Prompt Engineering and Generative AI for firmware stack} \hfill {2023 - 2024}\\
+\textbf{Description}: Solution design for accelerated silicon tape-in with accelerating firmware deliveries
+
+\begin{itemize}
+    \item Work task summarization with Azure LLM Open AI services (GPT3.5 and GPT4)
+    \item Code Review against standard static code analysis and common vulnerabilities finding
+    \item Generation of Code Enhancement suggestion 
+\end{itemize}
+
+\textbf{Platform Provisioning with Pre-Production Reference Board} \hfill {2023 - 2024}\\
+\textbf{Description}: Platform Provisioning with automating most common features for pre-production server processor such as:
+
+\begin{itemize}
+    \item Remote BMC and BIOS Firmware Flashing
+    \item OS Deployment from artifactory through Jenkins Pipeline
+    \item Boot to EFI Shell and OS
+    \item Configuration of Initial system setup with Jenkins pipeline steps with Baseboard management controller RedFish API
+\end{itemize}
+
+% === 2022 Projects ===
+\textbf{Universal Scalable Firmware} \hfill {2022 - 2024} \\
+\textbf{Description}: Architecture design of Platform orchestration layer for Firmware Configuration
+
+\begin{itemize}
+    \item Motivation of workgroup - \href{https://uefi.org/sites/default/files/resources/Firmware%20Configuration%20%E2%80%93%20Past%2C%20Present%2C%20and%20Future_Zimmer.pdf}{Firmware Configuration – Past, Present, and Future}
+    \item \href{https://universalscalablefirmware.github.io/documentation/7_yaml_boot_configuration.html}{Firmware Configuration}
+\end{itemize}
+
+% === 2020 Projects ===
+\textbf{Firmware Automation Framework}  \hfill {2020 - Present} \\
+\textbf{Description}: Lead SDL for an automation foundation framework for high scaled volume of silicon devices with edk2 UEFI firmware;
+
+\begin{itemize}
+    \item Seamless configuration of system without any manual intervention for BIOS configuration.
+    \item SDL activities like legal compliance, security, licensing, static code analysis
+    \item Continuous deployment and test with jenkins and tox configurations
+    \item Release Artifact management to JFrog Artifactory using GitHub Actions
+    \item \href{https://github.com/intel/xml-cli}{https://github.com/intel/xml-cli}
+\end{itemize}
+
+% === 2019 Projects ===
+\textbf{Multiview Video Summarization} \hfill {2019 - 2020}\\
+\textbf{Description}: Summarizing video of multiple view angles of egocentric location in to one to generate effective video summary, minimizing overhead to explore multiple cam feed to discover accidents or anomalies.
+
+% \textbf{Consummating Research Projects using Agile Manifesto} \hfill {2018}\\
+% \textbf{Description}: Utilization of Agile Manifesto for consummating research projects. Enlightening the appropriateness of Scrum for the research projects which is a widely used agile manifesto at present in the software industry.
+
+% \textbf{Inventory Management and GST Billing for Mobile Shop} \hfill {2018}\\
+% \textbf{Description}: To avoid the headache of manual billing automated GST billing system designed to manage stocks and update according to purchase and sales and generate GST invoice for sales.
+
+% \textbf{Streaming Box} \hfill {2017 - 2018}\\
+% \textbf{Description}: An alternate streaming service to DTH and providing easy customized IPTV streaming service based on Kodi (formerly xbmc) Framework
+
+% \begin{itemize}
+%     \item Backend Streaming Service, authentication and server security with Django Framework and REST API
+%     \item Web Portal to enable vendor customize Streaming Front-end UI for their users
+%     \item Cross compilation and Native compilation to enable various platform support as Android, Windows and MacOS
+% \end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf M.Tech Computer Science} \hfill {Jul 2018 - Jun 2020 }
+\\ 
+Nirma University, GPA: 8.49
+
+{\bf B.E. in Computer Science and Engineering} \hfill {Aug 2013 - Apr 2017 }
+Gujarat Technological University, CGPA: 8.08
+
+{\textbf{12th Science, GSHSEB, Class XII}}  \hfill {Jun 2011 - Mar 2013 }\\
+Science Stream, 74.92\% 
+ 
+% {\textbf{GSHSEB, Class X}}  \hfill {Jun 2010 - Mar 2011 }\\
+% 81.4\%
+
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%     Certifications
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Certifications}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+2025 & \href{https://learning.amd.com/certs/11279/95A05A0CC78443498F47FD0FDB6188FC65062.pdf}{AMD ROCm Star - Application Developer} by AMD Adaptive Computing Training Team
+\\
+2025 & \href{https://learn.deeplearning.ai/accomplishments/f4188f58-c075-45f4-b2c8-6b6318c51ceb?usp=sharing}{On-Device AI} by Qualcomm \& DeepLearning.ai
+\\
+2025 & \href{https://www.linkedin.com/learning/certificates/bfa1f8149f171120da54a209a31361de4ac56fe1e3f167e2cbc8cd9fd7ca38d1?u=2140730}{Essential Terraform in AWS}
+\\
+2021 & \href{https://www.credly.com/badges/a3861155-a2e2-43d5-a8dd-cc21651c5841?source=linked_in_profile}{Product Assurance and Security Yellow Belt - Software}
+\\
+2020 & Natural Language Processing with Classification
+and Vector Spaces
+\\ & \href{https://coursera.org/verify/S9DGGMCDMBGQ}{Coursera S9DGGMCDMBGQ}
+\\
+2020 & Improving Deep Neural Networks: Hyperparameter
+Tuning, Regularization and Optimization
+\\ & \href{https://coursera.org/verify/SMWQJKJYJW6G}{Coursera SMWQJKJYJW6G}
+\\
+2020 & Structuring Machine Learning Projects - \href{https://coursera.org/verify/SEJML7H3TN5Z}{Coursera SEJML7H3TN5Z}
+\\
+2020 & Neural Networks and Deep Learning - \href{https://coursera.org/verify/S2TETZHTLUSL}{Coursera S2TETZHTLUSL}
+\\
+2020 & Machine Learning - \href{https://coursera.org/verify/XVNXNPPZ3JMA}{Coursera XVNXNPPZ3JMA}
+
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%     Achievements
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Achievements}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+2023 & Firmware Configuration Presentation at UEFI Developers Conference \& Plugfest \\
+2023 & Tech Talk on Harnessing Multiprogramming across CPU, GPU and 
+\\ & QPU (Quantum Processing Unit) \\
+2021 & Expert Lecture on CUDA Programming \\
+2019-Present & 4000+ reputation on Stackoverflow \\
+2017-Present & Active volunteer on Peer Learning, Cultural and team building activity \\
+2018 & Rank \#1 for Python challenges on hackerrank \\
+2018 & Rank \#112 from 2 lacs+ participants in Techgig's National Coding Contest 2018 \\
+% 2014 & Establishment of complete network for Department
+
+\end{tabular}
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%     Publications
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Publications}
+
+\begin{itemize}
+    \item \href{https://youtube.com/playlist?list=PLWyBQeJgIuzDFELUK9ineNkOr9LuYatkR&si=mUVeIkLFK5gzyZa7}{HIP Parallel Programming with ROCm} Lecture Series, YouTube  \hfill {2025}
+    \item \href{https://youtube.com/playlist?list=PLWyBQeJgIuzC6oN8AihmSMkgheX9TLDaW&si=HAOmHXKP4KdsAzPX}{Beyond the Power | Data Center \& BMC} Lecture Series, YouTube  \hfill {2025}
+    \item \href{https://www.youtube.com/playlist?list=PLWyBQeJgIuzD2o9ZVw5oI-P2fX4uyNKZA}{System Design for Parallel Programming} Lecture Series, YouTube  \hfill {2025}
+    % \item A Review on Honeypot : Track the Attack. NCCICT, 2016 \hfill {2016}
+    \item \href{https://uefi.org/sites/default/files/resources/Firmware%20Configuration%20%E2%80%93%20Past%2C%20Present%2C%20and%20Future_Zimmer.pdf}{Firmware Configuration – Past, Present, and Future}. Presentation, UEFI DevCon 2023 \hfill {2023}
+\end{itemize}
+
+
+\end{rSection}
+
+\end{document}
+
