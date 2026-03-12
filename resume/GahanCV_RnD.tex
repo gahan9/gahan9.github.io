@@ -26,8 +26,43 @@
 \usepackage{fontawesome}
 \usepackage{setspace}
 \usepackage{hyperref}
+\usepackage[x11names]{xcolor}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0.1em, topsep=0.2em, partopsep=0pt, parsep=0pt, leftmargin=1.5em}
+
+% Define Theme Colors
+\definecolor{primaryColor}{RGB}{20, 50, 100} % Dark Blue for main headers
+\definecolor{accentColor}{RGB}{0, 90, 160} % Lighter Blue for highlights
+\definecolor{linkColor}{RGB}{0, 70, 130} % Blue for links
+
+% Redefine rSection for color contrast
+\makeatletter
+\renewenvironment{rSection}[1]{ % 1 input argument - section name
+  \sectionskip
+  \textcolor{primaryColor}{\MakeUppercase{\bf #1}} % Section title
+  \sectionlineskip
+  {\color{primaryColor}\hrule} % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{1.5em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+\makeatother
+
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\makeatletter
+\def \printname {
+  \begingroup
+    \hfil{\textcolor{primaryColor}{\MakeUppercase{\namesize\bf \@name}}}\hfil
+    \nameskip\break
+  \endgroup
+}
+\makeatother
+
 \name{Gahan Saraiya} % Your name
 %\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
 \address{ 
@@ -38,9 +73,9 @@
 
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
+    linkcolor=linkColor,
     filecolor=magenta,      
-    urlcolor=blue,
+    urlcolor=linkColor,
     pdfpagemode=FullScreen,
     }
 \begin{document}
@@ -55,7 +90,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{OBJECTIVE}
-{High Performance Computing (HPC) Development Engineer with 8+ years of Research and Development experience in system software, GPU computing, and distributed systems architecture. Currently at AMD India Pvt Ltd., specializing in performance optimization and AI/ML workload execution on HPC accelerators (GPUs). Deep expertise in Python, modern C++, and Bash scripting for large-scale on-prem and cloud infrastructure deployments. Strong background in operating systems internals, computer networks, and high-performance applications across heterogeneous computing environments comprising CPUs, GPUs, and accelerators. Proven track record in deploying and optimizing Deep-Learning frameworks including TensorFlow and PyTorch on enterprise HPC clusters. Passionate about open-source contribution and advancing the state-of-the-art in parallel computing and distributed systems.}
+{High Performance Computing (HPC) Development Engineer with 9+ years of Research and Development experience in system software, GPU computing, and distributed systems architecture. Currently at AMD India Pvt Ltd., specializing in performance optimization and AI/ML workload execution on HPC accelerators (GPUs). Deep expertise in Python, modern C++, and Bash scripting for large-scale on-prem and cloud infrastructure deployments. Strong background in operating systems internals, computer networks, and high-performance applications across heterogeneous computing environments comprising CPUs, GPUs, and accelerators. Proven track record in deploying and optimizing Deep-Learning frameworks including TensorFlow and PyTorch on enterprise HPC clusters. Passionate about open-source contribution and advancing the state-of-the-art in parallel computing and distributed systems.}
 
 \end{rSection}
 
@@ -68,53 +103,30 @@
 
 \begin{rSection}{TECHNICAL SKILLS}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-
 % PROFILE 0
 \if\profile0
-Programming Languages & \textbf{C++}, C, \textbf{Python}, \textbf{Bash/Shell Scripting}, SQL
-\\
-HPC \& GPU Computing & ROCm, \textbf{HIP Programming}, \textbf{CUDA}, PyCUDA, OpenCL, MPI, OpenMP,
-\\ & GPU Profiling, Memory Optimization, Kernel Development
-\\
-Deep Learning Frameworks & \textbf{TensorFlow}, \textbf{PyTorch}, TensorRT, ONNX Runtime,
-\\ & Large-Scale Model Training, Distributed Training
-\\
-Distributed Systems & CPU/GPU/Accelerator Architecture, Parallel Programming,
-\\ & High-Performance Networks, InfiniBand, RDMA, MPI
-\\
-Operating Systems & Linux Internals, Kernel Development, UEFI/BIOS Firmware,
-\\ & System Performance Tuning, Memory Management
-\\
-Cloud \& Infrastructure & AWS (EC2, S3, SageMaker), GCP, Azure, Kubernetes, Docker,
-\\ & Terraform, Large-Scale On-Prem HPC Clusters, Cloud Security Policies
-\\
-CI/CD \& DevOps & Jenkins, GitHub Actions, TeamCity, JFrog Artifactory,
-\\ & Cluster Validation CI
-\\
-System Level IP & RAS (Reliability, Availability, Serviceability), Compute Partitioning,
-\\ & Boot-time Optimization, CPER, SMI
-\\
+\begin{itemize}
+    \item \textbf{\textcolor{primaryColor}{Programming Languages:}} \textbf{C++}, C, \textbf{Python}, \textbf{Bash/Shell Scripting}, SQL
+    \item \textbf{\textcolor{primaryColor}{HPC \& GPU Computing:}} ROCm, \textbf{HIP Programming}, \textbf{CUDA}, PyCUDA, OpenCL, MPI, OpenMP, GPU Profiling, Memory Optimization, Kernel Development
+    \item \textbf{\textcolor{primaryColor}{Deep Learning Frameworks:}} \textbf{TensorFlow}, \textbf{PyTorch}, TensorRT, ONNX Runtime, Large-Scale Model Training, Distributed Training
+    \item \textbf{\textcolor{primaryColor}{Distributed Systems:}} CPU/GPU/Accelerator Architecture, Parallel Programming, High-Performance Networks, InfiniBand, RDMA, MPI
+    \item \textbf{\textcolor{primaryColor}{Operating Systems:}} Linux Internals, Kernel Development, UEFI/BIOS Firmware, System Performance Tuning, Memory Management
+    \item \textbf{\textcolor{primaryColor}{Cloud \& Infrastructure:}} AWS (EC2, S3, SageMaker), GCP, Azure, Kubernetes, Docker, Terraform, Large-Scale On-Prem HPC Clusters, Cloud Security Policies
+    \item \textbf{\textcolor{primaryColor}{CI/CD \& DevOps:}} Jenkins, GitHub Actions, TeamCity, JFrog Artifactory, Cluster Validation CI
+    \item \textbf{\textcolor{primaryColor}{System Level IP:}} RAS (Reliability, Availability, Serviceability), Compute Partitioning, Boot-time Optimization, CPER, SMI
+\end{itemize}
 \fi
 
 %  PROFILE 1
 \if\profile1
-Languages & Python, Shell Scripting, SQL, LaTeX, YAML 
-\\
-Frameworks & Pytorch, Pytest, Edk2, PyCUDA, Pandas, UEFI, Selenium, Redfish
-\\
-Architecture Design & Parallel Programming System Architecture, ROCm, HIP Programming
-\\
-Tools and Services & GitHub Actions, Jenkins, Restful APIs, Teamcity, Terraform,
-\\ & Docker, Docker Compose, Jenkins, TeamCity, GiT 
-\\
-Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage Maker, 
-\\ & AWS Lambda, AWS Cloudfront, ECR, ECS, EKS, JFrog Artifactory,
-\\ & GCP, Azure, Digital Ocean, Cloud Security Policies, Cluster Validation CI
-    
+\begin{itemize}
+    \item \textbf{\textcolor{primaryColor}{Languages:}} Python, Shell Scripting, SQL, LaTeX, YAML
+    \item \textbf{\textcolor{primaryColor}{Frameworks:}} Pytorch, Pytest, Edk2, PyCUDA, Pandas, UEFI, Selenium, Redfish
+    \item \textbf{\textcolor{primaryColor}{Architecture Design:}} Parallel Programming System Architecture, ROCm, HIP Programming
+    \item \textbf{\textcolor{primaryColor}{Tools and Services:}} GitHub Actions, Jenkins, Restful APIs, Teamcity, Terraform, Docker, Docker Compose, Jenkins, TeamCity, GiT
+    \item \textbf{\textcolor{primaryColor}{Cloud Technologies:}} AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage Maker, AWS Lambda, AWS Cloudfront, ECR, ECS, EKS, JFrog Artifactory, GCP, Azure, Digital Ocean, Cloud Security Policies, Cluster Validation CI
+\end{itemize}
 \fi
-
-\end{tabular}
 
 \end{rSection}
 
@@ -127,7 +139,7 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 
 \begin{rSection}{Experience}
 
-{\bf Senior System Software Designer at AMD India Pvt Ltd} \hfill {Mar 2024 - Present }
+{\textbf{\textcolor{accentColor}{Senior System Software Designer at AMD India Pvt Ltd}}} \hfill {Mar 2024 - Present }
 \begin{itemize}
 \if\profile1
     \item Workload execution pool management for cross geo platforms for CI/CD on Jenkins
@@ -147,7 +159,7 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 \fi
 \end{itemize}
 
-{\textbf{Senior Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Oct 2023 - Mar 2024}
+{\textbf{\textcolor{accentColor}{Senior Firmware Development Engineer at Intel Technology India Pvt Ltd}}}  \hfill {Oct 2023 - Mar 2024}
 \begin{itemize}
     \item \textbf{HPC Infrastructure R\&D}: Platform provisioning and infrastructure design for mass automation of high-performance computing products.
     \item \textbf{System Architecture Design}: Led Platform Orchestration Layer architecture for Universal Scalable Firmware (USF) using \textbf{modern C++} and \textbf{Python}.
@@ -159,7 +171,7 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
     \item \textbf{Operating System Optimization}: Enhanced firmware-based boot-time performance through deep OS-level optimizations.
 \end{itemize}
  
-{\textbf{Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Jun 2020 - Sept 2023}
+{\textbf{\textcolor{accentColor}{Firmware Development Engineer at Intel Technology India Pvt Ltd}}}  \hfill {Jun 2020 - Sept 2023}
 \begin{itemize}
     \item \textbf{R\&D Technical Lead}: Spearheaded next-generation platform architecture design, owning domains including Automation Framework, Platform Provisioning, and Quantum Firmware Design.
     \item \textbf{C++ and Python Development}: Developed high-performance firmware validation tools using \textbf{Python scripting} for large-scale automated testing.
@@ -169,28 +181,28 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
     \item Mentoring junior engineers on HPC concepts, parallel programming, and modern C++ best practices.
 \end{itemize}
 
-{\textbf{Firmware Engineer Intern at Intel Technology India Pvt Ltd}}  \hfill {Jun 2019 - May 2020}
+{\textbf{\textcolor{accentColor}{Firmware Engineer Intern at Intel Technology India Pvt Ltd}}}  \hfill {Jun 2019 - May 2020}
 \begin{itemize}
     \item \textbf{Low-Level Systems Development}: BIOS/UEFI Firmware development using EDK2 framework with \textbf{C} and \textbf{C++} for client products.
     \item \textbf{Operating Systems}: Deep understanding of boot processes, memory management, and hardware abstraction layers.
 \end{itemize}
 
 % \if\profile2
-{\textbf{Teaching Assistantship at Nirma University}}  \hfill {Aug 2018 - May 2019}
+{\textbf{\textcolor{accentColor}Teaching Assistantship at Nirma University}}  \hfill {Aug 2018 - May 2019}
 \begin{itemize}
     \item Data Mining and Visulaization
 \end{itemize}
 % \fi
 
 % \if\profile1
-{\textbf{Software Developer at Quixom Technology}}   \hfill {Jul 2017 - Apr 2018}
+{\textbf{\textcolor{accentColor}Software Developer at Quixom Technology}}   \hfill {Jul 2017 - Apr 2018}
 \begin{itemize}
     \item SaaS-Employee management system (chat, surveys, benchmark, analytics...) and Restful API Development
     \item Socket programming in python to receive continuous data from IoT device and display chunks of data meaningfully
     \item Streaming service with Web-Portal, DRF and Kodi across platforms
 \end{itemize}
 
-{\textbf{Freelance Full-stack Developer}}   \hfill {2015 - Apr 2019}
+{\textbf{\textcolor{accentColor}Freelance Full-stack Developer}}   \hfill {2015 - Apr 2019}
 \begin{itemize}
     \item Cloud solution for Data gathering and webscraping with selenium and GCP.
     \item Designing template and banners for High resolution prints
@@ -207,48 +219,17 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 \begin{rSection}{Projects}
 
 % === 2026 Projects ===
-{\bf DevOps Management for Cluster Validation} \hfill {2025 - Present}\\
+{\textbf{\textcolor{accentColor}{DevOps Management for Cluster Validation}}} \hfill {2025 - Present}\\
 \textbf{Description}: Delivering consistent CI for cluster validation with S3 log upload and security policy configuration across cloud networks and regulations.
 
-\begin{itemize}
-    \item \textbf{Cluster Validation CI:} Developed and delivered consistent Continuous Integration workflows for automated cluster validation.
-    \item \textbf{Cloud Infrastructure:} Configured automated log upload processes to AWS S3, ensuring reliable log retention and monitoring.
-    \item \textbf{Security \& Compliance:} Implemented appropriate security policy configurations tailored to various cloud network setups and industry regulations.
-\end{itemize}
-
-{\bf GPU Performance Analysis for Data Center Workloads (R\&D)} \hfill {2024 - Present}\\
-\textbf{Description}: High-Performance Computing research for in-band GPU profiling on distributed systems
-
-\begin{itemize}
-    \item \textbf{HPC Profiling Architecture:} Designed and implemented robust in-band profiling mechanisms using \textbf{C++} and \textbf{Python} for comprehensive GPU telemetry across large-scale data center deployments.
-    \item \textbf{Distributed Workload Orchestration:} Developed dynamic workload orchestration systems for heterogeneous computing environments (\textbf{CPUs, GPUs, accelerators}) with real-time resource adaptation.
-    \item \textbf{Deep Learning Workload Analysis:} Profiled \textbf{TensorFlow} and \textbf{PyTorch} training workloads on multi-GPU clusters, analyzing CUDA/HIP kernel performance and memory bandwidth utilization.
-    \item \textbf{Operating System Integration:} Implemented low-level system interfaces for hardware metric collection including GPU temperature, power consumption, and memory management through SMI.
-    \item \textbf{Performance Optimization:} Developed kernel profiling tools using \textbf{modern C++} for call stack timing analysis, identifying bottlenecks in high-performance applications.
-\end{itemize}
-
-{\bf Intelligent Defect Triage System using RAG \& LangGraph (R\&D)} \hfill {2024 - Present}\\
-\textbf{Description}: AI-powered defect analysis and real-time triage prediction for enterprise HPC validation workflows
-
-\begin{itemize}
-    \item \textbf{RAG Pipeline Architecture:} Designed and implemented a Retrieval-Augmented Generation (RAG) pipeline using \textbf{LangGraph} and \textbf{Python} for automated JIRA dashboard defect analysis.
-    \item \textbf{Defect Trend Analysis:} Developed ML models to identify defect root cause patterns, rejection reason trends, and domain-based cluster classification across HPC validation datasets.
-    \item \textbf{Real-Time Triage Prediction:} Built intelligent triage prediction system leveraging contextual availability (setup/infra issues, standard system call failures, known solutions) to accelerate defect resolution.
-    \item \textbf{LLM Integration:} Integrated large language models with \textbf{PyTorch} embeddings for semantic similarity search and context-aware defect categorization.
-    \item \textbf{Enterprise Scalability:} Deployed solution on large-scale on-prem infrastructure supporting distributed teams across multiple validation clusters.
-\end{itemize}
+{\textbf{\textcolor{accentColor}{Intelligent Defect Triage System using RAG \& LangGraph (R\&D)}}} \hfill {2024 - Present}\\
+\textbf{Description}: AI-powered defect analysis and real-time triage prediction for enterprise HPC validation workflows using LangGraph and PyTorch embeddings.
 
 % === 2023 Projects ===
-{\bf Prompt Engineering and Generative AI for firmware stack} \hfill {2023 - 2024}\\
-\textbf{Description}: Solution design for accelerated silicon tape-in with accelerating firmware deliveries
+{\textbf{\textcolor{accentColor}{Prompt Engineering and Generative AI for firmware stack}}} \hfill {2023 - 2024}\\
+\textbf{Description}: Solution design leveraging Azure LLM OpenAI services (GPT3.5 \& GPT4) with automated task summarization and advanced security analytics.
 
-\begin{itemize}
-    \item Work task summarization with Azure LLM Open AI services (GPT3.5 and GPT4)
-    \item Code Review against standard static code analysis and common vulnerabilities finding
-    \item Generation of Code Enhancement suggestion 
-\end{itemize}
-
-\textbf{Platform Provisioning with Pre-Production Reference Board} \hfill {2023 - 2024}\\
+{\textbf{\textcolor{accentColor}{Platform Provisioning with Pre-Production Reference Board}}} \hfill {2023 - 2024}\\
 \textbf{Description}: Platform Provisioning with automating most common features for pre-production server processor such as:
 
 \begin{itemize}
@@ -259,7 +240,7 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 \end{itemize}
 
 % === 2022 Projects ===
-\textbf{Universal Scalable Firmware} \hfill {2022 - 2024} \\
+{\textbf{\textcolor{accentColor}{Universal Scalable Firmware}}} \hfill {2022 - 2024} \\
 \textbf{Description}: Architecture design of Platform orchestration layer for Firmware Configuration
 
 \begin{itemize}
@@ -268,7 +249,7 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 \end{itemize}
 
 % === 2020 Projects ===
-\textbf{Firmware Automation Framework}  \hfill {2020 - Present} \\
+{\textbf{\textcolor{accentColor}{Firmware Automation Framework}}}  \hfill {2020 - Present} \\
 \textbf{Description}: Lead SDL for an automation foundation framework for high scaled volume of silicon devices with edk2 UEFI firmware;
 
 \begin{itemize}
@@ -280,23 +261,9 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 \end{itemize}
 
 % === 2019 Projects ===
-\textbf{Multiview Video Summarization} \hfill {2019 - 2020}\\
+% === 2019 Projects ===
+{\textbf{\textcolor{accentColor}{Multiview Video Summarization}}} \hfill {2019 - 2020}\\
 \textbf{Description}: Summarizing video of multiple view angles of egocentric location in to one to generate effective video summary, minimizing overhead to explore multiple cam feed to discover accidents or anomalies.
-
-% \textbf{Consummating Research Projects using Agile Manifesto} \hfill {2018}\\
-% \textbf{Description}: Utilization of Agile Manifesto for consummating research projects. Enlightening the appropriateness of Scrum for the research projects which is a widely used agile manifesto at present in the software industry.
-
-% \textbf{Inventory Management and GST Billing for Mobile Shop} \hfill {2018}\\
-% \textbf{Description}: To avoid the headache of manual billing automated GST billing system designed to manage stocks and update according to purchase and sales and generate GST invoice for sales.
-
-% \textbf{Streaming Box} \hfill {2017 - 2018}\\
-% \textbf{Description}: An alternate streaming service to DTH and providing easy customized IPTV streaming service based on Kodi (formerly xbmc) Framework
-
-% \begin{itemize}
-%     \item Backend Streaming Service, authentication and server security with Django Framework and REST API
-%     \item Web Portal to enable vendor customize Streaming Front-end UI for their users
-%     \item Cross compilation and Native compilation to enable various platform support as Android, Windows and MacOS
-% \end{itemize}
 
 \end{rSection}
 
@@ -309,14 +276,14 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 
 \begin{rSection}{Education}
 
-{\bf M.Tech Computer Science} \hfill {Jul 2018 - Jun 2020 }
+{\textbf{\textcolor{accentColor}{M.Tech Computer Science}}} \hfill {Jul 2018 - Jun 2020 }
 \\ 
 Nirma University, GPA: 8.49
 
-{\bf B.E. in Computer Science and Engineering} \hfill {Aug 2013 - Apr 2017 }
+{\textbf{\textcolor{accentColor}{B.E. in Computer Science and Engineering}}} \hfill {Aug 2013 - Apr 2017 }
 Gujarat Technological University, CGPA: 8.08
 
-{\textbf{12th Science, GSHSEB, Class XII}}  \hfill {Jun 2011 - Mar 2013 }\\
+{\textbf{\textcolor{accentColor}{12th Science, GSHSEB, Class XII}}}  \hfill {Jun 2011 - Mar 2013 }\\
 Science Stream, 74.92\% 
  
 % {\textbf{GSHSEB, Class X}}  \hfill {Jun 2010 - Mar 2011 }\\
@@ -333,30 +300,17 @@ Science Stream, 74.92\%
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Certifications}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-2025 & \href{https://learning.amd.com/certs/11279/95A05A0CC78443498F47FD0FDB6188FC65062.pdf}{AMD ROCm Star - Application Developer} by AMD Adaptive Computing Training Team
-\\
-2025 & \href{https://learn.deeplearning.ai/accomplishments/f4188f58-c075-45f4-b2c8-6b6318c51ceb?usp=sharing}{On-Device AI} by Qualcomm \& DeepLearning.ai
-\\
-2025 & \href{https://www.linkedin.com/learning/certificates/bfa1f8149f171120da54a209a31361de4ac56fe1e3f167e2cbc8cd9fd7ca38d1?u=2140730}{Essential Terraform in AWS}
-\\
-2021 & \href{https://www.credly.com/badges/a3861155-a2e2-43d5-a8dd-cc21651c5841?source=linked_in_profile}{Product Assurance and Security Yellow Belt - Software}
-\\
-2020 & Natural Language Processing with Classification
-and Vector Spaces
-\\ & \href{https://coursera.org/verify/S9DGGMCDMBGQ}{Coursera S9DGGMCDMBGQ}
-\\
-2020 & Improving Deep Neural Networks: Hyperparameter
-Tuning, Regularization and Optimization
-\\ & \href{https://coursera.org/verify/SMWQJKJYJW6G}{Coursera SMWQJKJYJW6G}
-\\
-2020 & Structuring Machine Learning Projects - \href{https://coursera.org/verify/SEJML7H3TN5Z}{Coursera SEJML7H3TN5Z}
-\\
-2020 & Neural Networks and Deep Learning - \href{https://coursera.org/verify/S2TETZHTLUSL}{Coursera S2TETZHTLUSL}
-\\
-2020 & Machine Learning - \href{https://coursera.org/verify/XVNXNPPZ3JMA}{Coursera XVNXNPPZ3JMA}
-
-\end{tabular}
+\begin{itemize}
+    \item \textbf{2025} -- \href{https://learning.amd.com/certs/11279/95A05A0CC78443498F47FD0FDB6188FC65062.pdf}{AMD ROCm Star - Application Developer} by AMD Adaptive Computing Training Team
+    \item \textbf{2025} -- \href{https://learn.deeplearning.ai/accomplishments/f4188f58-c075-45f4-b2c8-6b6318c51ceb?usp=sharing}{On-Device AI} by Qualcomm \& DeepLearning.ai
+    \item \textbf{2025} -- \href{https://www.linkedin.com/learning/certificates/bfa1f8149f171120da54a209a31361de4ac56fe1e3f167e2cbc8cd9fd7ca38d1?u=2140730}{Essential Terraform in AWS}
+    \item \textbf{2021} -- \href{https://www.credly.com/badges/a3861155-a2e2-43d5-a8dd-cc21651c5841?source=linked_in_profile}{Product Assurance and Security Yellow Belt - Software}
+    \item \textbf{2020} -- Natural Language Processing with Classification and Vector Spaces -- \href{https://coursera.org/verify/S9DGGMCDMBGQ}{Coursera S9DGGMCDMBGQ}
+    \item \textbf{2020} -- Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization -- \href{https://coursera.org/verify/SMWQJKJYJW6G}{Coursera SMWQJKJYJW6G}
+    \item \textbf{2020} -- Structuring Machine Learning Projects - \href{https://coursera.org/verify/SEJML7H3TN5Z}{Coursera SEJML7H3TN5Z}
+    \item \textbf{2020} -- Neural Networks and Deep Learning - \href{https://coursera.org/verify/S2TETZHTLUSL}{Coursera S2TETZHTLUSL}
+    \item \textbf{2020} -- Machine Learning - \href{https://coursera.org/verify/XVNXNPPZ3JMA}{Coursera XVNXNPPZ3JMA}
+\end{itemize}
 
 \end{rSection}
 
@@ -365,18 +319,15 @@ Tuning, Regularization and Optimization
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Achievements}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-2023 & Firmware Configuration Presentation at UEFI Developers Conference \& Plugfest \\
-2023 & Tech Talk on Harnessing Multiprogramming across CPU, GPU and 
-\\ & QPU (Quantum Processing Unit) \\
-2021 & Expert Lecture on CUDA Programming \\
-2019-Present & 4000+ reputation on Stackoverflow \\
-2017-Present & Active volunteer on Peer Learning, Cultural and team building activity \\
-2018 & Rank \#1 for Python challenges on hackerrank \\
-2018 & Rank \#112 from 2 lacs+ participants in Techgig's National Coding Contest 2018 \\
-% 2014 & Establishment of complete network for Department
-
-\end{tabular}
+\begin{itemize}
+    \item \textbf{2023} -- Firmware Configuration Presentation at UEFI Developers Conference \& Plugfest
+    \item \textbf{2023} -- Tech Talk on Harnessing Multiprogramming across CPU, GPU and QPU (Quantum Processing Unit)
+    \item \textbf{2021} -- Expert Lecture on CUDA Programming
+    \item \textbf{2019-Present} -- 4000+ reputation on Stackoverflow
+    \item \textbf{2017-Present} -- Active volunteer on Peer Learning, Cultural and team building activity
+    \item \textbf{2018} -- Rank \#1 for Python challenges on hackerrank
+    \item \textbf{2018} -- Rank \#112 from 2 lacs+ participants in Techgig's National Coding Contest 2018
+\end{itemize}
 
 \end{rSection}
 %----------------------------------------------------------------------------------------
