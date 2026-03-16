@@ -55,7 +55,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{OBJECTIVE}
-{Senior Firmware/Platform Engineer specializing in OpenBMC, server manageability, and platform enablement. 8+ years in Linux/embedded/server firmware, SoC bring-up, RAS, and platform orchestration; seeking to lead OpenBMC enablement and upstream-first development for next-generation server platforms.}
+{Senior System Software \& Firmware Engineer specializing in \textbf{UEFI firmware}, \textbf{EDK2}, \textbf{OpenBMC}, and platform enablement. 9+ years experience in firmware bring-up, \textbf{Open Source} contributions (\textbf{Mantis database}), \textbf{RAS} (Reliability, Availability, Serviceability), and \textbf{GPU firmware}. Actively engaged in upstream-first development, seeking to architect and optimize next-generation high-performance server platforms.}
 
 \end{rSection}
 
@@ -72,18 +72,17 @@
 
 % PROFILE 0
 \if\profile0
-Languages & C, C++, Python, Shell, SQL, LaTeX, YAML 
+Languages & UEFI \textbf{C}, \textbf{C++}, \textbf{Python}, Shell, SQL, LaTeX, YAML 
 \\
-Firmware/BMC & OpenBMC, Yocto, PLDM, IPMI, Redfish, fwupd, secure boot, TPM
+Firmware/BMC & \textbf{UEFI}, \textbf{EDK2}, \textbf{OpenBMC}, Yocto, PLDM, IPMI, \textbf{Redfish}, \textbf{fwupd}, Secure Boot, TPM
 \\
-Platform & UEFI/EDK2, systemd, device tree, bootloaders, kernel/driver debug
+Platform & Systemd, device tree, bootloaders, kernel/driver debug, SoC bring-up
 \\
-RAS & SEL/CPER, watchdog, telemetry, thermal/fan control, power capping, recovery
+RAS & \textbf{RAS for GPU firmware}, \textbf{Mantis Database}, \textbf{ROCm}, SEL/CPER, telemetry
 \\
 I/O & I2C/SMBus, SPI, UART, JTAG, Ethernet, CPLD/FPGA hooks
 \\
-Build/CI & Yocto, CMake, Git/Gerrit, Jenkins, GitHub Actions, TeamCity, Docker/OCI, 
-\\ & Terraform, REST APIs
+Build/CI & Yocto, CMake, Git, Jenkins, GitHub Actions, Docker/OCI, Terraform
 \\
 \fi
 
@@ -125,30 +124,28 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
     \item Docker orchestration on enterprise registry
     \item Platform provisioning migration with terraform
 \fi
-    \item Drive GPU platform RAS enablement and telemetry (thermal/power/memory/utilization) using in-band SMI tooling; define reliability/availability criteria for data center SKUs.
-    \item Architect profiling and orchestration flows to balance GPU workloads across fleets; integrate metrics into CI/regression for performance guardrails.
-    \item Partner with firmware and silicon teams on partitioning, SMI hooks, HIP profiling, and parallel execution models; author reproducible test suites for performance/functional coverage.
-    \item Provide RAS injection steps for MI2XX/MI3XX; refine fault coverage and recovery behaviors for serviceability.
+    \item Drive \textbf{RAS for GPU firmware with use-case scenario injection} on \textbf{ROCm} for MI2XX/MI3XX SKUs; define reliability/availability criteria for data center SKUs.
+    \item Architect in-band SMI tooling and telemetry (thermal/power/memory); formulate fault coverage and recovery behaviors for serviceability.
+    \item Partner with firmware and silicon teams on compute partitioning, SMI hooks, \textbf{HIP} profiling, and parallel execution models.
+    \item Actively contribute to \textbf{Open Source} firmware ecosystem; track architecture defects, enhancements, and issues leveraging the \textbf{Mantis database}.
 \end{itemize}
 
 {\textbf{Senior Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Oct 2023 - Mar 2024}
 \begin{itemize}
-    \item Co-architected Universal Scalable Firmware (USF) platform orchestration layer; aligned BIOS/BMC configuration flows and lifecycle policies.
-    \item Built provisioning pipelines for HPC boards: remote BMC/BIOS flashing, OS deploy, EFI/OS boot automation via Redfish and Jenkins.
-    \item Tuned boot-time performance for notebook platforms; hardened firmware delivery with staged deploy and artifact signing.
-    \item Integrated Azure OpenAI-based code review for firmware quality/security checks; unified GitHub Actions \textrightarrow{} CloudBees Jenkins for CI/CD.
+    \item Co-architected Universal Scalable Firmware (USF) orchestration layer; aligned \textbf{UEFI Firmware}/\textbf{BMC} configuration flows and lifecycle policies.
+    \item Built provisioning pipelines for HPC boards: remote \textbf{BMC}/\textbf{BIOS} flashing, OS deploy, \textbf{EFI}/OS boot automation via \textbf{Redfish} and \textbf{Jenkins}.
+    \item Tuned \textbf{boot-time performance}; hardened firmware delivery with staged deploy and artifact signing for notebook platforms.
 \end{itemize}
  
 {\textbf{Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Jun 2020 - Sept 2023}
 \begin{itemize}
-    \item Led firmware automation and SDLC compliance: licensing/legal/IP planning, security gates, static analysis, and code quality for USF POL.
-    \item Owned Jenkins security integrations (Snyk, Coverity) and GitHub review hooks for Python packaging/linting; enforced quality bars before merge.
-    \item Built and maintained TeamCity firmware functional validation; mentored engineers on platform provisioning and applied GenAI for code review.
+    \item Led \textbf{UEFI firmware} automation and SDLC compliance: security gates, static analysis, and code quality for the \textbf{EDK2} ecosystem.
+    \item Built and maintained full-scale \textbf{firmware} functional validation workflows; owned GitHub review hooks, Jenkins CI, and \textbf{Open Source} compliance tools.
 \end{itemize}
 
 {\textbf{Firmware Engineer Intern at Intel Technology India Pvt Ltd}}  \hfill {Jun 2019 - May 2020}
 \begin{itemize}
-    \item BIOS/UEFI (EDK2) development for client platforms; evaluated debugging solutions and OpenBoard package integration.
+    \item \textbf{BIOS}/\textbf{UEFI} (\textbf{EDK2}) development for client platforms; evaluated hardware debugging solutions and \textbf{OpenBoard} package integration.
 \end{itemize}
 
 % \if\profile2
@@ -198,24 +195,27 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
     \item \href{https://github.com/intel/xml-cli}{https://github.com/intel/xml-cli}
 \end{itemize}
 
-{\bf GPU Performance Analysis for Data Center Workloads} \hfill {2024 - Present}\\
-\textbf{Description}: In-band profiling through System Management Interface (SMI).
+{\bf \textbf{RAS} and Telemetry for \textbf{GPU Firmware}} \hfill {2024 - Present}\\
+\textbf{Description}: In-band profiling and \textbf{RAS for GPU firmware with use-case scenario injection} on \textbf{ROCm} stack.
 
 \begin{itemize}
     \item Telemetry for thermal/power/utilization; dynamic workload orchestration from hardware metrics.
-    \item Kernel timing capture and unified performance metric design for regression guardrails.
+    \item Developed reproducible tests and mapped defects using the \textbf{Mantis database} to drive \textbf{Open Source} issue resolution.
 \end{itemize}
 
 \textbf{Universal Scalable Firmware} \hfill {2022 - 2024} \\
-\textbf{Description}: Platform orchestration layer for firmware configuration.
+\textbf{Description}: Platform orchestration layer for \textbf{UEFI firmware} configuration.
 
 \begin{itemize}
     \item Motivation of workgroup - \href{https://uefi.org/sites/default/files/resources/Firmware%20Configuration%20%E2%80%93%20Past,%20Present,%20and%20Future_Zimmer.pdf}{Firmware Configuration – Past, Present, and Future}
     \item \href{https://universalscalablefirmware.github.io/documentation/7_yaml_boot_configuration.html}{Firmware Configuration}
 \end{itemize}
 
+{\bf Intelligent Defect Triage System using RAG \& LangGraph (R\&D)} \hfill {2024 - Present}\\
+\textbf{Description}: AI-powered defect analysis and real-time triage prediction for enterprise validation workflows.
+
 {\bf Prompt Engineering and Generative AI for firmware stack} \hfill {2023 - 2024}\\
-\textbf{Description}: Accelerated firmware deliveries with LLM assistance.
+\textbf{Description}: Accelerated \textbf{firmware} deliveries with LLM assistance.
 
 \begin{itemize}
     \item Task summarization via Azure OpenAI (GPT3.5/4); code review guidance vs static-check standards.
