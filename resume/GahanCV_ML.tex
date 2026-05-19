@@ -82,7 +82,7 @@ Health Telemetry \& Monitoring & System Management Interface (SMI), GPU Telemetr
 \\ & Hardware Metrics, Performance Profiling, In-Band Monitoring, 
 \\ & Real-time Health Monitoring
 \\
-ML/AI Frameworks & TensorFlow, PyTorch, TensorRT, PyCUDA, Pandas, NumPy, GEMM
+ML/AI Frameworks & TensorFlow, PyTorch, LangGraph, FAISS, TensorRT, PyCUDA, OpenAI/Vertex AI, Pandas, NumPy
 \\
 System Software \& Firmware & UEFI, EDK2, Firmware Architecture, Boot Optimization, \textbf{RAS} (
 \\ & Reliability, Availability, Serviceability), CPER, GPU Partitioning
@@ -90,7 +90,7 @@ System Software \& Firmware & UEFI, EDK2, Firmware Architecture, Boot Optimizati
 DevOps \& Infrastructure & Kubernetes, Docker, Docker Compose, Terraform, Jenkins, GitHub Actions,
 \\ & CI/CD Pipelines, Infrastructure as Code, Platform Provisioning
 \\
-Cloud \& Services & AWS (EC2, S3, Lambda, SageMaker, ECS, EKS), GCP, Azure,
+Cloud \& Services & AWS (EC2, S3, Lambda, SageMaker, ECS, EKS), GCP, Azure, Vertex AI,
 \\ & RESTful APIs, JFrog Artifactory, TeamCity, JIRA
 \\
 \fi
@@ -187,6 +187,29 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 %     PROJECT SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Projects}
+
+{\bf Agentic AI for Software Engineering Modernization} \hfill {2025 - Present}\\
+\textbf{Description}: Modernized enterprise repository workflows, code reviews, and project management by engineering multi-agent GenAI systems.
+\begin{itemize}
+    \item Developed tool-compatible custom skills, automated Git hooks, and multi-modal agents leveraging Claude, Cursor, and OpenAI API frameworks.
+    \item Engineered rigorous security compliance, sandboxed execution verification, and real-time LLM token spend/quota restriction mechanisms.
+\end{itemize}
+
+{\bf Context-Aware Task Routing \& Triage with LangGraph} \hfill {2025 - Present}\\
+\textbf{Description}: Led agile sprint cycles and managed timeline deliveries to develop an end-to-end, context-aware ticket/bug classification and routing engine.
+\begin{itemize}
+    \item Built graph-based LLM logic using LangGraph for cyclic agent routing, integrated with semantic search using FAISS vector databases and specialized embeddings.
+    \item Integrated diverse data sources (GitHub commits, Jira tickets, documentation history) with multiple APIs including OpenAI, Vertex AI, and sandboxed local LLMs.
+    \item Formulated a persona-based LLM counselor model that adapts summaries and technical advice, operating behind a strict quality matrix verification gate.
+\end{itemize}
+
+{\bf DevOps Management for Cluster Validation} \hfill {2025 - Present}\\
+\textbf{Description}: Established continuous integration infrastructure for automated validation of large-scale heterogeneous HPC and AI computing clusters.
+\begin{itemize}
+    \item Automated secure telemetry log shipping to S3 buckets, integrating custom pipeline controls and IAM roles for granular resource tracking.
+    \item Structured fine-grained security policy and compliance enforcement across cloud networks and multi-region regulatory domains.
+\end{itemize}
+
 {\bf GPU Cluster Performance Analysis \& Health Telemetry System} \hfill {2024 - Present}\\
 \textbf{Description}: Enterprise-grade solution for in-band profiling and health monitoring of GPU clusters in data center environments
 
@@ -302,6 +325,8 @@ Tuning, Regularization and Optimization
 \begin{rSection}{Achievements}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+2026 & Top 10 in AI Hackathon: Hack2Skill Prompt Wars by Google (In-person, Bangalore) \\
+2026 & Rank \#3 in Virtual Prompt Wars Hackathon \\
 2023 & Firmware Configuration Presentation at UEFI Developers Conference \& Plugfest \\
 2023 & Tech Talk on Harnessing Multiprogramming across CPU, GPU and 
 \\ & QPU (Quantum Processing Unit) \\
