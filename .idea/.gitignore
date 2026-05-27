@@ -10,3 +10,8 @@
 # IDE temp folder ignore
 /.idea/
 /.vscode
+
+# Latex output
+*.aux
+*.out
+*.log
