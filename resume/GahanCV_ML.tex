@@ -55,7 +55,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{PROFESSIONAL SUMMARY}
-{Staff-level Software Engineer with 8+ years of expertise in High-Performance Computing (HPC), parallel programming, and distributed systems architecture. Proven track record in designing and implementing scalable cluster architectures, health telemetry systems, and GPU-accelerated workloads for data center environments. Specialized in System Management Interface (SMI) design, workload orchestration, and performance optimization across heterogeneous computing platforms. Led cross-functional teams in developing enterprise-grade firmware automation frameworks and platform provisioning systems. Strong background in CUDA, ROCm, HIP programming, and cloud-native infrastructure.}
+{Staff-level Software Engineer with 8+ years of expertise in High-Performance Computing (HPC), parallel programming, and distributed systems architecture. Proven track record designing scalable cluster architectures, health telemetry, and GPU-accelerated workloads for data center environments. Specialized in System Management Interface (SMI), workload orchestration, Prometheus/Grafana/Slurm observability, and Agentic AI knowledge bases. Led cross-functional teams developing firmware automation frameworks and platform provisioning systems. Strong background in CUDA, ROCm, HIP, and cloud-native infrastructure.}
 
 \end{rSection}
 
@@ -79,16 +79,17 @@ Parallel \& Distributed Computing & CUDA Programming, ROCm, \textbf{HIP Programm
 \\ & Parallel Algorithm Design
 \\
 Health Telemetry \& Monitoring & System Management Interface (SMI), GPU Telemetry,
-\\ & Hardware Metrics, Performance Profiling, In-Band Monitoring, 
-\\ & Real-time Health Monitoring
+\\ & Prometheus, Grafana, Slurm, Hardware Metrics, Performance Profiling, 
+\\ & In-Band Monitoring, Observability Agents, Log Shipping to S3
 \\
-ML/AI Frameworks & TensorFlow, PyTorch, LangGraph, FAISS, TensorRT, PyCUDA, OpenAI/Vertex AI, Pandas, NumPy
+ML/AI Frameworks \& Agents & TensorFlow, PyTorch, LangGraph, FAISS, TensorRT, PyCUDA, 
+\\ & OpenAI/Vertex AI, Obsidian Knowledge Base, Agentic Memory Index, Pandas, NumPy
 \\
 System Software \& Firmware & UEFI, EDK2, Firmware Architecture, Boot Optimization, \textbf{RAS} (
 \\ & Reliability, Availability, Serviceability), CPER, GPU Partitioning
 \\
 DevOps \& Infrastructure & Kubernetes, Docker, Docker Compose, Terraform, Jenkins, GitHub Actions,
-\\ & CI/CD Pipelines, Infrastructure as Code, Platform Provisioning
+\\ & CI/CD Pipelines, Infrastructure as Code, Platform Provisioning, Cluster Validation
 \\
 Cloud \& Services & AWS (EC2, S3, Lambda, SageMaker, ECS, EKS), GCP, Azure, Vertex AI,
 \\ & RESTful APIs, JFrog Artifactory, TeamCity, JIRA
@@ -127,13 +128,15 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 
 {\bf Senior System Software Designer at AMD India Pvt Ltd} \hfill {Mar 2024 - Present }
 \begin{itemize}
-    \item Architected and implemented in-band health telemetry system for GPU clusters using System Management Interface (SMI), enabling real-time monitoring of temperature, power consumption, memory utilization, and compute core metrics across data center deployments.
-    \item Designed and developed dynamic workload orchestration framework for multi-GPU cluster environments, implementing load balancing algorithms that optimize resource allocation based on real-time hardware telemetry and thermal constraints.
-    \item Led performance benchmarking initiatives for HPC devices (GPUs), developing comprehensive test suites covering TensorFlow, PyTorch, and GEMM operations that validate performance against industry standards and identify optimization opportunities.
-    \item Architected parallel programming solutions using ROCm and HIP frameworks, enabling efficient multi-GPU workload distribution and achieving improved cluster utilization through intelligent workload scheduling.
-    \item Designed and implemented RAS (Reliability, Availability, Serviceability) injection mechanisms for MI2XX and MI3XX platforms, establishing health monitoring protocols and automated recovery procedures for production environments.
-    \item Developed cluster health monitoring infrastructure with in-band profiling capabilities, capturing kernel-level performance metrics and system telemetry to enable proactive issue detection and performance optimization.
-    \item Collaborated with cross-functional teams of engineers and researchers to define system architecture requirements, establish best practices for parallel programming, and drive technical decisions for next-generation HPC platforms.
+    \item Manage cluster network observability and telemetry using Prometheus, Grafana, and Slurm; auto-deploy observability runners and agents across large GPU fleets.
+    \item Design Obsidian-based agentic memory network for agent memory index, knowledge base, and skills auto-sync (human-readable and agent-readable).
+    \item Automate secure telemetry log shipping to AWS S3 for cluster validation CI.
+    \item Architected in-band health telemetry for GPU clusters using System Management Interface (SMI), monitoring temperature, power, memory, and compute metrics.
+    \item Designed dynamic workload orchestration for multi-GPU environments with load balancing based on real-time hardware telemetry and thermal constraints.
+    \item Led performance benchmarking for HPC GPUs with test suites covering TensorFlow, PyTorch, and GEMM operations.
+    \item Built parallel programming solutions using ROCm and HIP for multi-GPU workload distribution and cluster utilization.
+    \item Implemented RAS injection mechanisms for MI2XX and MI3XX platforms with health monitoring and recovery procedures.
+    \item Collaborated with cross-functional teams on system architecture and Agentic AI tooling for next-generation HPC platforms.
 \end{itemize}
 
 {\textbf{Senior Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Oct 2023 - Mar 2024}
@@ -188,26 +191,33 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Projects}
 
-{\bf Agentic AI for Software Engineering Modernization} \hfill {2025 - Present}\\
-\textbf{Description}: Modernized enterprise repository workflows, code reviews, and project management by engineering multi-agent GenAI systems.
+{\bf Cluster Management and Observability} \hfill {2025 - Present}\\
+\textbf{Description}: Cluster management and observability for large-scale GPU networks.
 \begin{itemize}
-    \item Developed tool-compatible custom skills, automated Git hooks, and multi-modal agents leveraging Claude, Cursor, and OpenAI API frameworks.
-    \item Engineered rigorous security compliance, sandboxed execution verification, and real-time LLM token spend/quota restriction mechanisms.
+    \item Integrate Prometheus, Grafana, and Slurm telemetry for cluster network monitoring.
+    \item Auto-deploy observability runners and agents across large cluster fleets.
+    \item Automate secure log upload and telemetry shipping to AWS S3 with cluster validation CI.
+\end{itemize}
+
+{\bf Obsidian Agentic Memory Network} \hfill {2025 - Present}\\
+\textbf{Description}: Agentic design for memory index, knowledge base, and skills sync for humans and agents.
+\begin{itemize}
+    \item Deliver Obsidian-based agentic memory network with indexed knowledge base and auto-synced skills.
+\end{itemize}
+
+{\bf Agentic AI for Software Engineering Modernization} \hfill {2025 - Present}\\
+\textbf{Description}: Modernized enterprise repository workflows, code reviews, and project management with multi-agent GenAI systems.
+\begin{itemize}
+    \item Developed tool-compatible custom skills, automated Git hooks, and multi-modal agents leveraging Claude, Cursor, and OpenAI APIs.
+    \item Engineered security compliance, sandboxed execution verification, and LLM token spend/quota controls.
 \end{itemize}
 
 {\bf Context-Aware Task Routing \& Triage with LangGraph} \hfill {2025 - Present}\\
-\textbf{Description}: Led agile sprint cycles and managed timeline deliveries to develop an end-to-end, context-aware ticket/bug classification and routing engine.
+\textbf{Description}: End-to-end context-aware ticket/bug classification and routing engine.
 \begin{itemize}
-    \item Built graph-based LLM logic using LangGraph for cyclic agent routing, integrated with semantic search using FAISS vector databases and specialized embeddings.
-    \item Integrated diverse data sources (GitHub commits, Jira tickets, documentation history) with multiple APIs including OpenAI, Vertex AI, and sandboxed local LLMs.
-    \item Formulated a persona-based LLM counselor model that adapts summaries and technical advice, operating behind a strict quality matrix verification gate.
-\end{itemize}
-
-{\bf DevOps Management for Cluster Validation} \hfill {2025 - Present}\\
-\textbf{Description}: Established continuous integration infrastructure for automated validation of large-scale heterogeneous HPC and AI computing clusters.
-\begin{itemize}
-    \item Automated secure telemetry log shipping to S3 buckets, integrating custom pipeline controls and IAM roles for granular resource tracking.
-    \item Structured fine-grained security policy and compliance enforcement across cloud networks and multi-region regulatory domains.
+    \item Built graph-based LLM logic using LangGraph with FAISS vector databases and specialized embeddings.
+    \item Integrated GitHub, Jira, and documentation history with OpenAI, Vertex AI, and local LLMs.
+    \item Formulated a persona-based LLM counselor model behind a quality matrix verification gate.
 \end{itemize}
 
 {\bf GPU Cluster Performance Analysis \& Health Telemetry System} \hfill {2024 - Present}\\
@@ -325,6 +335,7 @@ Tuning, Regularization and Optimization
 \begin{rSection}{Achievements}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+2026 & Top 1\% recognition for AI use-case development \\
 2026 & Top 10 in AI Hackathon: Hack2Skill Prompt Wars by Google (In-person, Bangalore) \\
 2026 & Rank \#3 in Virtual Prompt Wars Hackathon \\
 2023 & Firmware Configuration Presentation at UEFI Developers Conference \& Plugfest \\

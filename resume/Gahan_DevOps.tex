@@ -52,7 +52,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{PROFESSIONAL SUMMARY}
-Senior DevOps and MLOps Engineer with 8+ years of experience designing, implementing, and managing scalable cloud infrastructure, CI/CD pipelines, and machine learning operations. Proven expertise in containerization, Infrastructure as Code (IaC), multi-cloud platforms (AWS, Azure, GCP), Kubernetes orchestration, and automated ML model deployment pipelines. Strong background in Python automation, Docker containerization, Terraform, Jenkins/GitHub Actions CI/CD, and observability solutions. Experienced in managing AI/ML workload execution on HPC devices, implementing MLOps practices for model training, deployment, and monitoring at scale.
+Senior DevOps and MLOps Engineer with 8+ years of experience designing and managing scalable cloud infrastructure, CI/CD pipelines, and machine learning operations. Proven expertise in containerization, Infrastructure as Code (IaC), multi-cloud platforms (AWS, Azure, GCP), Kubernetes, and automated ML model deployment. Strong background in Python automation, Docker, Terraform, Jenkins/GitHub Actions, and observability (Prometheus, Grafana, Slurm). Experience managing AI/ML workloads on HPC GPUs, cluster telemetry, log shipping to S3, and Agentic AI knowledge-base systems at AMD India Pvt Ltd.
 
 \end{rSection}
 
@@ -79,8 +79,11 @@ MLOps \& ML Frameworks & PyTorch, TensorFlow, LangGraph, FAISS, MLflow, Model Se
 \\ & Model Monitoring, AWS SageMaker, MLOps Pipelines, Model Versioning
 \\
 Infrastructure \& Monitoring & Infrastructure as Code (IaC), Container Orchestration, 
-\\ & Cloud Architecture, System Monitoring, Logging, Observability, 
-\\ & Performance Optimization, Auto-scaling, Load Balancing
+\\ & Prometheus, Grafana, Slurm, System Monitoring, Logging, Observability, 
+\\ & Telemetry, Log Shipping to S3, Observability Agents, Auto-scaling, Load Balancing
+\\
+Agentic AI \& Knowledge Ops & Obsidian Knowledge Base, Agentic Memory Index, Skills Auto-Sync,
+\\ & LangGraph, FAISS, Claude, Cursor, LLM APIs
 \\
 APIs \& Services & RESTful APIs, Microservices Architecture, API Gateway, 
 \\ & Service Mesh, Redfish API, Selenium Automation
@@ -99,14 +102,15 @@ APIs \& Services & RESTful APIs, Microservices Architecture, API Gateway,
 
 {\bf Senior System Software Designer at AMD India Pvt Ltd} \hfill {Mar 2024 - Present }
 \begin{itemize}
-    \item Architected and managed distributed workload execution pools across multiple geographic regions, implementing CI/CD pipelines on Jenkins for automated build, test, and deployment workflows
-    \item Led release management operations for ROCm builds across production, staging, and development environments, managing complex matrix configurations of operating systems and toolchains
-    \item Designed and implemented Docker containerization strategies with enterprise container registry (JFrog Artifactory), optimizing image builds and deployment pipelines
-    \item Migrated platform provisioning infrastructure to Infrastructure as Code (IaC) using Terraform, enabling automated infrastructure deployment and reducing manual configuration errors by 70\%
-    \item Developed and maintained MLOps pipelines for AI/ML workload execution on HPC devices (GPUs), integrating automated testing, model versioning, and deployment workflows
-    \item Implemented Kubernetes-based container orchestration solutions for managing GPU workloads, optimizing resource allocation and ensuring high availability
-    \item Created automated monitoring and alerting systems for infrastructure health, performance metrics, and deployment status using CloudWatch and custom observability tools
-    \item Conducted functional and performance benchmarking of HPC devices (GPUs) by developing and executing comprehensive test suites aligned with industry standards
+    \item Manage cluster network observability and telemetry using Prometheus, Grafana, and Slurm; auto-deploy observability runners and agents across large GPU cluster fleets
+    \item Design Obsidian-based agentic memory network for agent memory index, knowledge base, and skills auto-sync (human-readable and agent-readable)
+    \item Automate secure telemetry log shipping to AWS S3 for cluster validation CI with IAM and network security controls
+    \item Architected and managed distributed workload execution pools across geographic regions with Jenkins CI/CD for build, test, and deployment
+    \item Led release management for ROCm builds across production, staging, and development environments with OS and toolchain matrix configurations
+    \item Designed Docker containerization with enterprise registry (JFrog Artifactory), optimizing image builds and deployment pipelines
+    \item Migrated platform provisioning to Infrastructure as Code (IaC) using Terraform for automated infrastructure deployment
+    \item Developed MLOps pipelines for AI/ML workload execution on HPC GPUs, integrating automated testing and deployment workflows
+    \item Conducted functional and performance benchmarking of HPC GPUs with test suites aligned to industry standards
 \end{itemize}
 
 {\textbf{Senior Firmware Development Engineer at Intel Technology India Pvt Ltd}}  \hfill {Oct 2023 - Mar 2024}
@@ -155,14 +159,17 @@ APIs \& Services & RESTful APIs, Microservices Architecture, API Gateway,
 %     PROJECT SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{KEY PROJECTS}
+{\bf Cluster Management and Observability} \hfill {2026 - Present}\\
+Cluster management and observability for large-scale GPU networks. Integrate Prometheus, Grafana, and Slurm telemetry stacks; auto-deploy observability runners and agents; automate secure log upload to AWS S3 for cluster validation CI.
+
+{\bf Obsidian Agentic Memory Network} \hfill {2026 - Present}\\
+Agentic design for agent memory index, knowledge base, and skills auto-sync optimized for human-readable and agent-readable consumption.
+
 {\bf Agentic AI for Software Engineering Modernization} \hfill {2025 - Present}\\
-Designed and implemented end-to-end GenAI engineering workflows and automated repository management agents. Built custom tool integrations and Git hooks compatible with Claude and Cursor. Engineered robust security compliance layers, sandboxed action verification, and strict token spend/quota restriction mechanisms to ensure budget-compliant and secure execution on private corporate systems.
+Designed GenAI engineering workflows and automated repository management agents. Built custom tool integrations and Git hooks compatible with Claude and Cursor. Engineered security compliance layers and token spend/quota restriction mechanisms.
 
 {\bf Automated Context-Aware Task Routing \& Triage with LangGraph} \hfill {2025 - Present}\\
-Developed and deployed automated, context-aware ticket triage and resolution pipelines. Built graph-based LLM routing logic with LangGraph, semantic classification using FAISS database indexes, and connectors to GitHub, Jira, and historical system data. Integrated Vertex AI, OpenAI, and local LLM endpoints behind a custom quality verification matrix for developer-facing advisory content.
-
-{\bf DevOps Management for Cluster Validation} \hfill {2025 - Present}\\
-Created highly consistent CI/CD infrastructure for validation of heterogeneous computing clusters. Designed secure S3-based log shipping mechanisms with custom IAM configuration, and configured fine-grained security policies and network validation checks complying with multi-region cloud regulations.
+Developed context-aware ticket triage and resolution pipelines. Built graph-based LLM routing with LangGraph, semantic classification using FAISS, and connectors to GitHub, Jira, and historical system data. Integrated Vertex AI, OpenAI, and local LLM endpoints.
 
 {\bf GPU Performance Analysis and MLOps Pipeline for Data Center Workloads} \hfill {2024 - Present}\\
 Designed and implemented end-to-end MLOps pipelines for automated ML model training, deployment, and monitoring on GPU clusters. Built Docker-based containerization strategies and Terraform IaC solutions for automated GPU cluster provisioning. Engineered comprehensive monitoring solutions for GPU telemetry using System Management Interface (SMI). Integrated automated testing, model validation, and deployment workflows into Jenkins pipelines for continuous ML model delivery.
@@ -222,6 +229,7 @@ Gujarat Technological University, CGPA: 8.08
 \begin{rSection}{ACHIEVEMENTS \& CONTRIBUTIONS}
 
 \begin{itemize}
+    \item Top 1\% recognition for AI use-case development (2026)
     \item Top 10 in AI Hackathon: Hack2Skill Prompt Wars by Google (In-person, Bangalore) (2026)
     \item Rank \#3 in Virtual Prompt Wars Hackathon (2026)
     \item Presented Firmware Configuration at UEFI Developers Conference \& Plugfest (2023)

@@ -55,7 +55,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{OBJECTIVE}
-{With over 8+ years of experience as a Senior Software Engineer, currently working at AMD India Pvt Ltd. for managing AI/ML workload execution on HPC device (GPU). I possess a strong command over Python, HPC, UEFI Firmware, and DevOps, complemented by a thorough understanding of their workflows and architectures. My enthusiasm for open-source contribution and knowledge dissemination reflects my commitment to being a philanthropist in the realm of technology. I am eager to channel my expertise into the architectural design of optimized quantum machine learning algorithms tailored for multi-programming environments, as well as to explore the synergies between these cutting-edge technologies and DevOps practices.}
+{Senior Software Engineer with 8+ years of experience, currently at AMD India Pvt Ltd managing AI/ML workload execution on HPC GPUs. Strong command of Python, HPC, UEFI firmware, DevOps, and cluster observability (Prometheus, Grafana, Slurm). Experience spanning Agentic AI, knowledge-base design, and CI/CD for large-scale GPU clusters. Open-source contributor focused on practical system software and parallel computing.}
 
 \end{rSection}
 
@@ -77,15 +77,17 @@ Languages & Python, C, C++, Shell Scripting, SQL, LaTeX, YAML
 Frameworks & Tensorflow, Pytorch, LangGraph, FAISS, TensorRT, Pytest, Edk2, PyCUDA,
 \\ & Pandas, UEFI, Selenium, Redfish
 \\
-Architecture Design & Parallel Programming System Architecture, ROCm, HIP Programming
+Architecture Design & Parallel Programming, ROCm, HIP, Cluster Observability, Agentic AI
 \\
 Tools and Services & GitHub Actions, Claude, Cursor, LLM APIs, Restful APIs, Teamcity,
-\\ & Terraform, Docker, Docker Compose, Jenkins, GiT 
+\\ & Terraform, Docker, Docker Compose, Jenkins, Git, Prometheus, Grafana, Slurm
 \\
-Cloud Technologies & GCP, AWS, Azure, Vertex AI, Digital Ocean, JFrog Artifactory,
-\\ & TeamCity, JIRA, AWS Sage Maker
+Cloud Technologies & GCP, AWS (S3, EC2, SageMaker), Azure, Vertex AI, Digital Ocean,
+\\ & JFrog Artifactory, TeamCity, JIRA
 \\
-System Level IP & RAS, Compute Paritioning, Boot time optimization, CPER
+Observability \& Ops & Telemetry, Log Shipping to S3, Observability Agents, Cluster Monitoring
+\\
+System Level IP & RAS, Compute Partitioning, Boot time optimization, CPER
 \\
 \fi
 
@@ -127,13 +129,14 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
     \item Docker orchestration on enterprise registry
     \item Platform provisioning migration with terraform
 \fi
-    \item Conducting functional and performance benchmarking of HPC devices (GPUs) by developing and executing comprehensive test suites aligned with industry standards.
-    \item Develop Load balanced optimal GPU performance criteria with thermal limits, power consumption, memory usage, and core utilization.
-    \item Incorporating state-of-the-art industry standards design models, implementing and utilizing frameworks like TensorFlow, PyTorch, and GEMM operations.
-    \item Provided precise steps for RAS (Reliability, Availability, and Serviceability) injection on MI2XX and MI3XX platforms.
-    \item Designed precise steps for range of firmware capabilities, including partitioning, System Management Interface (SMI), HIP profiling, and parallel execution.
+    \item Manage cluster observability and telemetry across large GPU networks using Prometheus, Grafana, and Slurm; automate deployment of observability runners and agents.
+    \item Design Obsidian-based agentic memory network for agent memory index, knowledge base, and skills auto-sync (human-readable and agent-readable).
+    \item Automate cluster validation CI with secure telemetry log shipping to AWS S3.
+    \item Conduct functional and performance benchmarking of HPC GPUs with test suites aligned to industry standards (TensorFlow, PyTorch, GEMM).
+    \item Define load-balanced GPU performance criteria covering thermal limits, power, memory usage, and core utilization.
+    \item Document RAS injection procedures for MI2XX and MI3XX platforms; cover partitioning, SMI, HIP profiling, and parallel execution.
 \if\profile0
-    \item Collaborating with a diverse team of engineers and researchers.
+    \item Collaborate with engineers and researchers on HPC and Agentic AI tooling.
 \fi
 \end{itemize}
 
@@ -195,23 +198,31 @@ Cloud Technologies & AWS EC2, AWS S3, AWS Cloudwatch, VPC Networking, AWS Sage M
 %     PROJECT SECTION
 %----------------------------------------------------------------------------------------
 \begin{rSection}{Projects}
-{\bf Agentic AI for Software Engineering Modernization} \hfill {2025 - Present}\\
-\textbf{Description}: Modernized enterprise workflows, repository management, and code review processes using multi-tool compatible Agentic AI and GenAI architectures (Claude, Cursor).
+{\bf Cluster Management and Observability} \hfill {2025 - Present}\\
+\textbf{Description}: Cluster management and observability for large-scale GPU networks at AMD.
 \begin{itemize}
-    \item Developed robust tools, automated git hooks, and modular agents; implemented security compliance and token spend restrictions.
+    \item Integrate industry-standard telemetry stacks (Prometheus, Grafana, Slurm) for cluster network monitoring.
+    \item Auto-deploy observability runners and agents across large cluster fleets.
+    \item Automate secure log upload and telemetry shipping to AWS S3 with CI for cluster validation.
+\end{itemize}
+
+{\bf Obsidian Agentic Memory Network} \hfill {2025 - Present}\\
+\textbf{Description}: Agentic design for memory index, knowledge base, and skills sync readable by both humans and agents.
+\begin{itemize}
+    \item Deliver Obsidian-based agentic memory network with indexed knowledge base and auto-synced skills for optimal human and agent consumption.
+\end{itemize}
+
+{\bf Agentic AI for Software Engineering Modernization} \hfill {2025 - Present}\\
+\textbf{Description}: Modernized enterprise workflows, repository management, and code review using multi-tool Agentic AI (Claude, Cursor).
+\begin{itemize}
+    \item Built tools, automated git hooks, and modular agents with security compliance and token spend controls.
 \end{itemize}
 
 {\bf Context-Aware Task Routing \& Triage with LangGraph} \hfill {2025 - Present}\\
-\textbf{Description}: Led team sprint goals to achieve automated context-aware task/issue routing and resolution using graph-based LLMs.
+\textbf{Description}: Context-aware task/issue routing and resolution using graph-based LLMs.
 \begin{itemize}
-    \item Designed smart routing using LangGraph and semantic FAISS indexes, integrating OpenAI, Vertex AI, and local LLM APIs.
-    \item Built connectors for GitHub, Jira, and historical systems, with a persona counselor model for summarizing and adapting findings.
-\end{itemize}
-
-{\bf DevOps Management for Cluster Validation} \hfill {2025 - Present}\\
-\textbf{Description}: Engineered CI pipeline configurations for validation of heterogeneous computing systems and log collection.
-\begin{itemize}
-    \item Developed automated telemetry log shipping to S3 buckets with integrated cloud network security controls and compliance.
+    \item Designed routing with LangGraph and FAISS semantic indexes; integrated OpenAI, Vertex AI, and local LLM APIs.
+    \item Built connectors for GitHub, Jira, and historical systems with a persona counselor for summarization.
 \end{itemize}
 
 {\bf GPU Performance Analysis for Data Center Workloads} \hfill {2024 - Present}\\
@@ -349,6 +360,7 @@ Tuning, Regularization and Optimization
 \begin{rSection}{Achievements}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+2026 & Top 1\% recognition for AI use-case development \\
 2026 & Top 10 in AI Hackathon: Hack2Skill Prompt Wars by Google (In-person, Bangalore) \\
 2026 & Rank \#3 in Virtual Prompt Wars Hackathon \\
 2023 & Firmware Configuration Presentation at UEFI Developers Conference \& Plugfest \\
