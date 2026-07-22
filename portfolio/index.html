@@ -5,13 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Portfolio | Gahan Saraiya — HPC R&amp;D</title>
 	<meta name="description" content="HPC Development Engineer: GPU clusters, Prometheus/Grafana/Slurm observability, Obsidian agentic memory, LangGraph triage, ROCm engineering." />
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="../css/normalize.css" />
 	<link rel="stylesheet" href="../css/site.css" />
 </head>
 <body class="portfolio-page">
+	<div class="bg-grid" aria-hidden="true"></div>
+
 	<div class="portfolio-shell">
-		<a class="portfolio-back" href="../index.html">&larr; Back to 3D profile</a>
+		<a class="portfolio-back" href="../index.html">&larr; Back to home</a>
 
 		<header class="portfolio-hero">
 			<p class="portfolio-eyebrow">HPC Development Engineer · 9+ years R&amp;D</p>
@@ -24,7 +28,7 @@
 				Python, modern C++, and Bash for large-scale on-prem and cloud deployments.
 			</p>
 			<div class="portfolio-contact">
-				<a href="mailto:gahansaraiya@gmail.com">gahansaraiya@gmail.com</a>
+				<a href="mailto:gahansaraiya@gmail.com">Email</a>
 				<a href="https://www.linkedin.com/in/gahan-saraiya/">LinkedIn</a>
 				<a href="https://github.com/gahan9">GitHub</a>
 				<a href="../resume/GahanCV_RnD.pdf">Resume (R&amp;D PDF)</a>
@@ -69,39 +73,34 @@
 				<article class="project-card">
 					<p class="project-date">2026 – Present</p>
 					<h3>Cluster Management and Observability</h3>
-					<p>Cluster management and observability for large-scale GPU networks. Integrate Prometheus, Grafana, and Slurm telemetry; auto-deploy observability runners and agents; automate secure log shipping to AWS S3 for cluster validation CI.</p>
+					<p>Prometheus, Grafana, and Slurm telemetry; auto-deploy observability runners and agents; secure log shipping to AWS S3 for cluster validation CI.</p>
 				</article>
 				<article class="project-card">
 					<p class="project-date">2026 – Present</p>
 					<h3>Obsidian Agentic Memory Network</h3>
-					<p>Agentic design for agent memory index, knowledge base, and skills auto-sync optimized for both human-readable and agent-readable consumption.</p>
+					<p>Agent memory index, knowledge base, and skills auto-sync for human-readable and agent-readable consumption.</p>
 				</article>
 				<article class="project-card">
 					<p class="project-date">2025 – Present</p>
-					<h3>Agentic AI for Software Engineering Modernization</h3>
-					<p>Modernized software engineering, repository management, and code review using Agentic AI and GenAI (Claude, Cursor). Multi-tool skills, agents, and hooks with security compliance and token spend restrictions.</p>
+					<h3>Agentic AI for Software Engineering</h3>
+					<p>Multi-tool skills, agents, and hooks (Claude, Cursor) with security compliance and token spend restrictions.</p>
 				</article>
 				<article class="project-card">
 					<p class="project-date">2025 – Present</p>
 					<h3>Context-Aware Task Routing with LangGraph</h3>
-					<p>Led team sprints for context-aware task/issue disposal using LangGraph. Smart routing via LLMs and semantic FAISS; connectors for GitHub, Jira, and historical data; persona-based counselor model.</p>
-					<p><a href="defect_triage_rag/README.md">Defect triage RAG implementation</a></p>
-				</article>
-				<article class="project-card">
-					<p class="project-date">2023 – 2024</p>
-					<h3>Prompt Engineering &amp; GenAI for Firmware</h3>
-					<p>Azure LLM OpenAI (GPT-3.5 &amp; GPT-4) for automated task summarization and advanced security analytics.</p>
+					<p>LangGraph routing with FAISS semantic search; GitHub/Jira connectors; OpenAI, Vertex AI, and local LLMs.</p>
+					<p><a href="defect_triage_rag/README.md">Defect triage RAG notes</a></p>
 				</article>
 				<article class="project-card">
 					<p class="project-date">2022 – 2024</p>
 					<h3>Universal Scalable Firmware (USF)</h3>
-					<p>Platform orchestration layer for firmware configuration. Contributed to UEFI industry standards.</p>
+					<p>Platform orchestration layer for firmware configuration; UEFI industry contribution.</p>
 					<p><a href="https://uefi.org/sites/default/files/resources/Firmware%20Configuration%20%E2%80%93%20Past%2C%20Present%2C%20and%20Future_Zimmer.pdf">UEFI DevCon presentation</a></p>
 				</article>
 				<article class="project-card">
 					<p class="project-date">2020 – Present</p>
 					<h3>Firmware Automation Framework</h3>
-					<p>SDL-compliant automation for edk2 UEFI firmware at scale — Jenkins, tox, GitHub Actions, JFrog Artifactory.</p>
+					<p>SDL-compliant edk2 UEFI automation — Jenkins, GitHub Actions, JFrog Artifactory.</p>
 					<p><a href="https://github.com/intel/xml-cli">intel/xml-cli</a></p>
 				</article>
 			</div>
@@ -114,7 +113,6 @@
 				<li><strong>2026</strong> — Top 10 in AI Hackathon: Hack2Skill Prompt Wars by Google (Bangalore)</li>
 				<li><strong>2026</strong> — Rank #3 in Virtual Prompt Wars Hackathon</li>
 				<li><strong>2023</strong> — Firmware Configuration at UEFI Developers Conference &amp; Plugfest</li>
-				<li><strong>2023</strong> — Tech Talk: Multiprogramming across CPU, GPU and QPU</li>
 				<li><strong>2019–Present</strong> — 4000+ reputation on <a href="https://stackoverflow.com/users/7664524/gahan">Stack Overflow</a></li>
 			</ul>
 		</section>
@@ -122,7 +120,7 @@
 		<section class="portfolio-section">
 			<h2 class="section-title">Publications &amp; talks</h2>
 			<ul class="pub-list">
-				<li><a href="https://youtube.com/playlist?list=PLWyBQeJgIuzDFELUK9ineNkOr9LuYatkR">HIP Parallel Programming with ROCm</a> — YouTube lecture series (2025)</li>
+				<li><a href="https://youtube.com/playlist?list=PLWyBQeJgIuzDFELUK9ineNkOr9LuYatkR">HIP Parallel Programming with ROCm</a> — YouTube (2025)</li>
 				<li><a href="https://youtube.com/playlist?list=PLWyBQeJgIuzC6oN8AihmSMkgheX9TLDaW">Beyond the Power | Data Center &amp; BMC</a> — YouTube (2025)</li>
 				<li><a href="https://www.youtube.com/playlist?list=PLWyBQeJgIuzD2o9ZVw5oI-P2fX4uyNKZA">System Design for Parallel Programming</a> — YouTube (2025)</li>
 				<li><a href="https://uefi.org/sites/default/files/resources/Firmware%20Configuration%20%E2%80%93%20Past%2C%20Present%2C%20and%20Future_Zimmer.pdf">Firmware Configuration – Past, Present, and Future</a> — UEFI DevCon 2023</li>
@@ -134,7 +132,7 @@
 			<ul class="cert-list">
 				<li><strong>2025</strong> — <a href="https://learning.amd.com/certs/11279/95A05A0CC78443498F47FD0FDB6188FC65062.pdf">AMD ROCm Star - Application Developer</a></li>
 				<li><strong>2025</strong> — <a href="https://learn.deeplearning.ai/accomplishments/f4188f58-c075-45f4-b2c8-6b6318c51ceb">On-Device AI</a> (Qualcomm &amp; DeepLearning.ai)</li>
-				<li><strong>2025</strong> — Essential Terraform in AWS (LinkedIn Learning)</li>
+				<li><strong>2025</strong> — Essential Terraform in AWS</li>
 				<li><strong>2021</strong> — Product Assurance and Security Yellow Belt - Software</li>
 			</ul>
 		</section>

@@ -1,373 +1,177 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Gahan Saraiya | HPC R&amp;D · GPU Systems · Agentic AI</title>
-		<meta name="description" content="HPC Development Engineer with 9+ years R&amp;D experience. AMD — GPU clusters, Prometheus/Grafana/Slurm observability, Obsidian agentic memory, LangGraph, ROCm/HIP." />
-		<meta name="keywords" content="gahan saraiya, HPC, R&amp;D, GPU, ROCm, HIP, CUDA, Prometheus, Grafana, Slurm, observability, agentic AI, LangGraph, FAISS, AMD, PyTorch, TensorFlow" />
-		<meta name="author" content="Gahan Saraiya" />
-		<meta property="og:title" content="Gahan Saraiya | HPC R&amp;D · GPU Systems · Agentic AI" />
-		<meta property="og:description" content="HPC Development Engineer at AMD — cluster observability, agentic memory networks, MI2XX/MI3XX GPU engineering, LangGraph triage." />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://gahan9.github.io/" />
-		<meta name="theme-color" content="#c2292e" />
-		<link rel="shortcut icon" type="image/png" href="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png"/>
-		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/site.css" />
-		<script>document.documentElement.className = 'js';</script>
-	</head>
-	<body>
-		<svg class="hidden">
-			<symbol id="icon-arrow" viewBox="0 0 24 24">
-				<title>arrow</title>
-				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
-			</symbol>
-			<symbol id="icon-drop" viewBox="0 0 24 24">
-				<title>drop</title>
-				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
-			</symbol>
-			<symbol id="icon-menu" viewBox="0 0 24 24">
-				<title>menu</title>
-				<path d="M24,5.8H0v-2h24V5.8z M19.8,11H4.2v2h15.6V11z M24,18.2H0v2h24V18.2z"/>
-			</symbol>
-			<symbol id="icon-cross" viewBox="0 0 24 24">
-				<title>cross</title>
-				<path d="M13.4,12l7.8,7.8l-1.4,1.4l-7.8-7.8l-7.8,7.8l-1.4-1.4l7.8-7.8L2.7,4.2l1.4-1.4l7.8,7.8l7.8-7.8l1.4,1.4L13.4,12z"/>
-			</symbol>
-			<symbol id="icon-info" viewBox="0 0 20 20">
-				<title>info</title>
-				<circle style="fill:#fff" cx="10" cy="10" r="9.1"/>
-				<path d="M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0z M10,18.6c-4.7,0-8.6-3.9-8.6-8.6S5.3,1.4,10,1.4s8.6,3.9,8.6,8.6S14.7,18.6,10,18.6z M10.7,5C10.9,5.2,11,5.5,11,5.7s-0.1,0.5-0.3,0.7c-0.2,0.2-0.4,0.3-0.7,0.3c-0.3,0-0.5-0.1-0.7-0.3C9.1,6.2,9,6,9,5.7S9.1,5.2,9.3,5C9.5,4.8,9.7,4.7,10,4.7C10.3,4.7,10.5,4.8,10.7,5z M9.3,8.3h1.4v7.2H9.3V8.3z"/>
-			</symbol>
-		</svg>
-		<div class="container">
-			<div class="scroller">
-				<div class="room room--current">
-					<div class="room__side room__side--back">
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
-<!--						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>-->
-						<iframe width="560" height="315"
-								src="https://www.youtube.com/embed/videoseries?si=vU5-kLweXfmiaqf8&amp;list=PLWyBQeJgIuzDFELUK9ineNkOr9LuYatkR"
-								title="YouTube video player" frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-						</iframe>
-					</div>
-					<div class="room__side room__side--left">
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-						<img class="room__img" src="https://uefi.org/sites/default/files/uefi_logo_red_web.jpg" alt="UEFI Logo" width="600" height="400" />
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
-						
-					</div>
-					<div class="room__side room__side--right">
-						<img class="room__img" src="img/wall/googlequantumcomputer.jpg" alt="quantum-computer" width="500" height="500" />
-						<img class="room__img" src="img/wall/python-logo.png" alt="PythonLogo" width="800" />
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-					</div>
-					<div class="room__side room__side--bottom">
-						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>
-					</div>
-				</div>
-				<!-- /room -->
-				<div class="room">
-					<div class="room__side room__side--back">
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
-						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>
-					</div>
-					<div class="room__side room__side--left">
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-						<img class="room__img" src="https://uefi.org/sites/default/files/uefi_logo_red_web.jpg" alt="UEFI Logo" width="600" height="400" />
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
-						
-					</div>
-					<div class="room__side room__side--right">
-						<img class="room__img" src="img/wall/googlequantumcomputer.jpg" alt="quantum-computer" width="500" height="500" />
-						<img class="room__img" src="img/wall/python-logo.png" alt="PythonLogo" width="800" />
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-					</div>
-					<div class="room__side room__side--bottom">
-						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>
-					</div>
-				</div>
-				<!-- /room -->
-				<div class="room">
-					<div class="room__side room__side--back">
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
-						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>
-					</div>
-					<div class="room__side room__side--left">
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-						<img class="room__img" src="https://uefi.org/sites/default/files/uefi_logo_red_web.jpg" alt="UEFI Logo" width="600" height="400" />
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
-						
-					</div>
-					<div class="room__side room__side--right">
-						<img class="room__img" src="img/wall/googlequantumcomputer.jpg" alt="quantum-computer" width="500" height="500" />
-						<img class="room__img" src="img/wall/python-logo.png" alt="PythonLogo" width="800" />
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-					</div>
-					<div class="room__side room__side--bottom">
-						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>
-					</div>
-				</div>
-				<!-- /room -->
-				<div class="room">
-					<div class="room__side room__side--back">
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
-						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>
-					</div>
-					<div class="room__side room__side--left">
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-						<img class="room__img" src="https://uefi.org/sites/default/files/uefi_logo_red_web.jpg" alt="UEFI Logo" width="600" height="400" />
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Gahan Saraiya | HPC R&amp;D · GPU Systems · Agentic AI</title>
+	<meta name="description" content="HPC Development Engineer with 9+ years R&amp;D experience at AMD — GPU clusters, observability, ROCm/HIP, and agentic AI systems." />
+	<meta name="author" content="Gahan Saraiya" />
+	<meta property="og:title" content="Gahan Saraiya | HPC R&amp;D · GPU Systems · Agentic AI" />
+	<meta property="og:description" content="HPC Development Engineer at AMD — cluster observability, agentic memory networks, MI2XX/MI3XX GPU engineering." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://gahan9.github.io/" />
+	<meta name="theme-color" content="#1a5f6e" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+	<div class="bg-grid" aria-hidden="true"></div>
 
-					</div>
-					<div class="room__side room__side--right">
-						<img class="room__img" src="img/wall/googlequantumcomputer.jpg" alt="quantum-computer" width="500" height="500" />
-						<img class="room__img" src="img/wall/python-logo.png" alt="PythonLogo" width="800" />
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-					</div>
-					<div class="room__side room__side--bottom">
-						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>
-					</div>
-				</div>
-				<!-- /room -->
-				<!-- <div class="room">
-					<div class="room__side room__side--back">
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
-						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>
-					</div>
-					<div class="room__side room__side--left">
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Python" width="600" height="400" />
-						<img class="room__img" src="img/wall/Iron-Man-Arc-Reactor-Core-Avengers-Logo-1.png" alt="Git Avatar"/>
-						
-					</div>
-					<div class="room__side room__side--right">
-						<img class="room__img" src="img/wall/googlequantumcomputer.jpg" alt="quantum-computer" width="500" height="500" />
-						<img class="room__img" src="img/wall/python-logo.png" alt="PythonLogo" width="800" />
-						<img class="room__img" src="img/wall/wanted-dead-or-alive-schrodingers-cat-for-men-women-kids-physicist-student-teacher-crazy-squirrel.jpg" alt="Schrodinger's Cat"/>
-					</div>
-					<div class="room__side room__side--bottom">
-						<img class="room__img" src="img/wall/Qubit.png" alt="Qubit"/>
-					</div>
-				</div> -->
-				<!-- /room -->
+	<header class="site-header">
+		<a class="logo" href="index.html">Gahan Saraiya</a>
+		<nav class="site-nav" aria-label="Primary">
+			<a href="#work">Work</a>
+			<a href="#projects">Projects</a>
+			<a href="portfolio/index.html">Portfolio</a>
+			<a href="resume/GahanCV_RnD.pdf">Resume</a>
+			<a href="https://github.com/gahan9">GitHub</a>
+		</nav>
+		<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+			<span></span><span></span>
+		</button>
+	</header>
+
+	<nav id="mobile-nav" class="mobile-nav" hidden>
+		<a href="#work">Work</a>
+		<a href="#projects">Projects</a>
+		<a href="portfolio/index.html">Portfolio</a>
+		<a href="resume/GahanCV_RnD.pdf">Resume</a>
+		<a href="https://github.com/gahan9">GitHub</a>
+		<a href="https://www.linkedin.com/in/gahan-saraiya/">LinkedIn</a>
+	</nav>
+
+	<main>
+		<section class="hero">
+			<p class="hero-kicker reveal">Senior System Software Designer · AMD India</p>
+			<h1 class="hero-name reveal">Gahan<br />Saraiya</h1>
+			<p class="hero-lead reveal">
+				HPC Development Engineer with 9+ years of R&amp;D in system software,
+				GPU computing, and distributed systems — specializing in AI/ML workloads
+				on accelerators and cluster observability.
+			</p>
+			<div class="hero-actions reveal">
+				<a class="btn btn-primary" href="resume/GahanCV_RnD.pdf">Download R&amp;D resume</a>
+				<a class="btn btn-ghost" href="portfolio/index.html">View portfolio</a>
 			</div>
-		</div><!-- /container -->
-		<div class="content">
-			<header class="codrops-header">
-				<!-- <div class="codrops-links">
-					<a class="codrops-icon codrops-icon--prev" href="https://github.com/Gahan9" title="git_profile"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
-					<a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=30534" title="Back to the article"><svg class="icon icon--drop"><use xlink:href="#icon-drop"></use></svg></a>
-				</div> -->
-				<h1 class="codrops-header__title"></h1>
-				<div class="subject">HPC R&amp;D · GPU Systems · Agentic AI</div>
-				<button class="btn btn--info btn--toggle" aria-label="About Gahan Saraiya">
-					<svg class="icon icon--info"><use xlink:href="#icon-info"></use></svg>
-					<svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>	
-				</button>
-				<button class="btn btn--menu btn--toggle" aria-label="Open navigation menu">
-					<svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
-					<svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
-				</button>
-				<div class="overlay overlay--menu">
-					<ul class="menu">
-						<li class="menu__item menu__item--current">
-							<a class="menu__link" href="portfolio/index.html">
-								Portfolio
-							</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="resume/GahanCV_RnD.pdf">
-								Resume (R&amp;D PDF)
-							</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="https://www.youtube.com/@casual_kitab001">
-								YouTube Channel
-							</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="https://gahan9.medium.com/">
-								Blogs
-							</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="https://github.com/gahan9">
-								GitHub
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="overlay overlay--info">
-					<p class="info">
-						<span class="info__lead">
-							<strong>HPC Development Engineer</strong> with 9+ years of R&amp;D experience in
-							system software, GPU computing, and distributed systems architecture.
-							Currently at <strong>AMD India Pvt Ltd.</strong>
-						</span>
-						Specializing in performance optimization, AI/ML workload execution on HPC accelerators (GPUs),
-						and cluster observability (<strong>Prometheus, Grafana, Slurm</strong>).
-						Deep expertise in Python, modern C++, and Bash for large-scale on-prem and cloud deployments.
-						<ul class="info__list">
-							<li><strong>Cluster Observability</strong> — telemetry, observability agents, S3 log pipelines</li>
-							<li><strong>Agentic Memory Network</strong> — Obsidian KB, skills auto-sync, LangGraph + FAISS</li>
-							<li><strong>GPU R&amp;D</strong> — MI2XX/MI3XX, ROCm/HIP, PyTorch, RAS injection, SMI profiling</li>
-							<li><strong>2026</strong> — Top 1% AI use-case · Hack2Skill Prompt Wars Top 10 &amp; #3</li>
-							<li>4000+ <a href="https://stackoverflow.com/users/7664524/gahan">Stack Overflow</a> reputation</li>
-						</ul>
-						<p class="info__contact">
-							<a href="mailto:gahansaraiya@gmail.com">Email</a> ·
-							<a href="https://www.linkedin.com/in/gahan-saraiya/">LinkedIn</a> ·
-							<a href="resume/GahanCV_RnD.pdf">R&amp;D Resume</a> ·
-							<a href="portfolio/index.html">Full portfolio</a>
-						</p>
-					</p>
-				</div>
-			</header>
-			<!--<h4 class="location"></h4>-->
-			<div class="slides">
-				<div class="slide">
-					<div class="slide__name">
-						<h2 class="slide__name">Gahan <br/>Saraiya</h2>
-					</div>
-					<div class="slide__title">
-						<p class="slide__role">HPC Development Engineer · 9+ years R&amp;D</p>
-						<div class="slide__row">
-							<div class="slide__content">
-								<iframe width="480" height="240"
-									src="https://www.youtube.com/embed/videoseries?si=vU5-kLweXfmiaqf8&amp;list=PLWyBQeJgIuzDFELUK9ineNkOr9LuYatkR"
-									title="HIP Parallel Programming with ROCm lecture series" frameborder="0"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-									referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-								</iframe>
-							</div>
-							<div class="slide__side">
-								<h3>
-									<span><a href="https://github.com/gahan9">GitHub</a></span>
-									<span><a href="portfolio/index.html">Portfolio</a></span>
-									<span><a href="resume/GahanCV_RnD.pdf">R&amp;D CV</a></span>
-								</h3>
-								<div class="chip-row">
-									<span class="chip">AMD · MI2XX / MI3XX</span>
-									<span class="chip chip--muted">ROCm · HIP · PyTorch</span>
-									<span class="chip chip--muted">Prometheus · Grafana · Slurm</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<p class="slide__date">Senior System Software Designer · AMD</p>
-				</div>
-				<div class="slide">
-					<h2 class="slide__name">Stack Overflow</h2>
-					<h3 class="slide__title">
-						<span>
-							<a href="https://stackoverflow.com/users/7664524/gahan">
-								<img src="https://stackoverflow.com/users/flair/7664524.png?theme=clean" width="208" height="58" alt="Gahan Saraiya on Stack Overflow">
-							</a>
-						</span>
-						<p class="slide__highlight">
-							4000+ reputation helping developers with Python, systems, and HPC questions.
-						</p>
-						<div class="slide__links">
-							<a href="https://stackoverflow.com/users/7664524/gahan">Profile</a>
-							<a href="https://stackoverflow.com/users/story/7664524">Developer story</a>
-						</div>
-					</h3>
-					<p class="slide__date">2019 – Present</p>
-				</div>
-				<div class="slide">
-					<h2 class="slide__name">Resume</h2>
-					<h3 class="slide__title">
-						<div class="slide__links">
-							<a href="resume/GahanCV_RnD.pdf">R&amp;D (primary)</a>
-							<a href="resume/GahanCV_ml.pdf">ML / HPC</a>
-							<a href="resume/Gahan_DevOps.pdf">DevOps</a>
-							<a href="resume/GahanCV_BMC_firmware.pdf">Firmware</a>
-						</div>
-						<p class="slide__highlight">
-							<strong>GahanCV_RnD.pdf</strong> — cluster observability, Obsidian agentic memory,
-							MI2XX/MI3XX GPU engineering, LangGraph triage, ROCm/HIP, certifications &amp; achievements.
-						</p>
-					</h3>
-					<p class="slide__date">Canonical R&amp;D profile · 2026</p>
-				</div>
-				<div class="slide">
-					<h2 class="slide__name">Projects</h2>
-					<h3 class="slide__title">
-						<p class="slide__highlight">
-							<strong>2026</strong> — Cluster observability (Prometheus/Grafana/Slurm) &amp; Obsidian agentic memory network<br/>
-							<strong>2025</strong> — Agentic AI modernization &amp; LangGraph context-aware task routing (FAISS, GitHub/Jira)<br/>
-							<strong>2023–24</strong> — USF firmware orchestration, platform provisioning, Azure OpenAI code review
-						</p>
-						<div class="chip-row">
-							<span class="chip">Top 1% AI use-case</span>
-							<span class="chip chip--muted">Hack2Skill Top 10 &amp; #3</span>
-							<span class="chip chip--muted">AMD ROCm Star</span>
-						</div>
-						<div class="slide__links">
-							<a href="portfolio/index.html">Full portfolio</a>
-							<a href="https://youtube.com/playlist?list=PLWyBQeJgIuzDFELUK9ineNkOr9LuYatkR">ROCm lectures</a>
-							<a href="https://www.linkedin.com/in/gahan-saraiya/">LinkedIn</a>
-						</div>
-					</h3>
-					<p class="slide__date">AMD India · Mar 2024 – Present</p>
-				</div>
-				<!-- <div class="slide">
-					<h2 class="slide__name"></h2>
-					<h3 class="slide__title">
-						<span></span>
-						<div class="slide__number"></div>
-					</h3>
-					<p class="slide__date"></p>
-				</div> -->
-				<!-- <div class="slide">
-					<h2 class="slide__name"></h2>
-					<h3 class="slide__title">
-						<span></span>
-						<div class="slide__number"></div>
-					</h3>
-					<p class="slide__date"></p>
-				</div> -->
+			<ul class="hero-tags reveal" aria-label="Focus areas">
+				<li>ROCm / HIP</li>
+				<li>Prometheus · Grafana · Slurm</li>
+				<li>PyTorch</li>
+				<li>LangGraph · FAISS</li>
+				<li>MI2XX / MI3XX</li>
+			</ul>
+		</section>
+
+		<section id="work" class="section">
+			<div class="section-head">
+				<p class="section-label">Current role</p>
+				<h2>Building reliable GPU fleets at scale</h2>
 			</div>
-			<nav class="nav" aria-label="Room navigation">
-				<button class="btn btn--nav btn--nav-left" aria-label="Previous room">
-					<svg class="nav-icon nav-icon--left" width="42px" height="12px" viewBox="0 0 70 20">
-						<path class="nav__triangle" d="M52.5,10L70,0v20L52.5,10z"/>
-						<path class="nav__line" d="M55.1,11.4H0V8.6h55.1V11.4z"/>
-					</svg>
-				</button>
-				<button class="btn btn--nav btn--nav-right" aria-label="Next room">
-					<svg class="nav-icon nav-icon--right" width="42px" height="12px" viewBox="0 0 70 20">
-						<path class="nav__triangle" d="M52.5,10L70,0v20L52.5,10z"/>
-						<path class="nav__line" d="M55.1,11.4H0V8.6h55.1V11.4z"/>
-					</svg>
-				</button>
-			</nav>
-		</div><!-- /content -->
-		<div class="overlay overlay--loader overlay--active">
-			<div class="loader">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
+			<div class="work-grid">
+				<article class="work-item reveal">
+					<h3>Cluster observability</h3>
+					<p>Prometheus, Grafana, and Slurm telemetry across large GPU networks — with auto-deployed observability runners and agents.</p>
+				</article>
+				<article class="work-item reveal">
+					<h3>Agentic memory network</h3>
+					<p>Obsidian-based agent memory index, knowledge base, and skills auto-sync for humans and agents.</p>
+				</article>
+				<article class="work-item reveal">
+					<h3>Telemetry pipelines</h3>
+					<p>Secure cluster validation log shipping to AWS S3, integrated into CI for heterogeneous systems.</p>
+				</article>
+				<article class="work-item reveal">
+					<h3>GPU performance R&amp;D</h3>
+					<p>MI2XX / MI3XX benchmarking, PyTorch workloads, HIP/ROCm profiling, RAS injection, and SMI metrics.</p>
+				</article>
 			</div>
+		</section>
+
+		<section id="projects" class="section section-alt">
+			<div class="section-head">
+				<p class="section-label">Selected projects</p>
+				<h2>Recent engineering</h2>
+			</div>
+			<div class="project-list">
+				<article class="project-row reveal">
+					<span class="project-year">2026</span>
+					<div>
+						<h3>Cluster Management and Observability</h3>
+						<p>Industry-standard monitoring stacks, agent auto-deploy, and S3 telemetry for cluster validation CI.</p>
+					</div>
+				</article>
+				<article class="project-row reveal">
+					<span class="project-year">2026</span>
+					<div>
+						<h3>Obsidian Agentic Memory Network</h3>
+						<p>Memory index and knowledge base with skills sync optimized for human- and agent-readable use.</p>
+					</div>
+				</article>
+				<article class="project-row reveal">
+					<span class="project-year">2025</span>
+					<div>
+						<h3>LangGraph Task Routing &amp; Triage</h3>
+						<p>Context-aware issue routing with FAISS semantic search, GitHub/Jira connectors, and LLM APIs.</p>
+					</div>
+				</article>
+				<article class="project-row reveal">
+					<span class="project-year">2025</span>
+					<div>
+						<h3>Agentic AI for Engineering Workflows</h3>
+						<p>Multi-tool skills, agents, and hooks (Claude, Cursor) with security and token spend controls.</p>
+					</div>
+				</article>
+			</div>
+			<p class="section-cta reveal">
+				<a href="portfolio/index.html">See full portfolio, talks, and certifications →</a>
+			</p>
+		</section>
+
+		<section class="section">
+			<div class="section-head">
+				<p class="section-label">Recognition</p>
+				<h2>Highlights</h2>
+			</div>
+			<ul class="highlight-list reveal">
+				<li><strong>2026</strong> — Top 1% recognition for AI use-case development</li>
+				<li><strong>2026</strong> — Top 10, Hack2Skill Prompt Wars by Google (Bangalore)</li>
+				<li><strong>2026</strong> — Rank #3, Virtual Prompt Wars Hackathon</li>
+				<li><strong>2025</strong> — AMD ROCm Star — Application Developer</li>
+				<li><strong>2019–Present</strong> — 4000+ Stack Overflow reputation</li>
+			</ul>
+		</section>
+
+		<section class="section section-cta-block">
+			<div class="cta-panel reveal">
+				<h2>Resumes by focus</h2>
+				<p>Canonical profile is R&amp;D. Variants tailored for ML/HPC, DevOps, and firmware roles.</p>
+				<div class="resume-links">
+					<a href="resume/GahanCV_RnD.pdf">R&amp;D</a>
+					<a href="resume/GahanCV_ml.pdf">ML / HPC</a>
+					<a href="resume/Gahan_DevOps.pdf">DevOps</a>
+					<a href="resume/GahanCV_BMC_firmware.pdf">Firmware</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div>
+			<p class="footer-name">Gahan Saraiya</p>
+			<p class="footer-meta">HPC Development Engineer · AMD India Pvt Ltd</p>
 		</div>
-		<p class="room-hint" aria-hidden="true">Arrow keys or buttons to explore · ℹ for bio</p>
-		<noscript>
-			<div class="noscript-fallback">
-				<h1>Gahan Saraiya</h1>
-				<p>HPC Development Engineer with 9+ years R&amp;D experience. Senior System Software Designer at AMD India Pvt Ltd — GPU clusters, Prometheus/Grafana/Slurm observability, Obsidian agentic memory, LangGraph triage.</p>
-				<p><a href="portfolio/index.html">Portfolio</a> · <a href="resume/GahanCV_RnD.pdf">R&amp;D Resume (PDF)</a> · <a href="https://github.com/gahan9">GitHub</a></p>
-			</div>
-		</noscript>
-		<script src="js/anime.min.js"></script>
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/main.js"></script>
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
-	</body>
+		<div class="footer-links">
+			<a href="mailto:gahansaraiya@gmail.com">Email</a>
+			<a href="https://www.linkedin.com/in/gahan-saraiya/">LinkedIn</a>
+			<a href="https://github.com/gahan9">GitHub</a>
+			<a href="https://www.youtube.com/@casual_kitab001">YouTube</a>
+			<a href="https://gahan9.medium.com/">Medium</a>
+		</div>
+	</footer>
+
+	<script src="js/main.js"></script>
+</body>
 </html>
