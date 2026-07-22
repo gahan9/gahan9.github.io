@@ -81,6 +81,7 @@
 	var	currentRoom = 0,
 		// Total number of rooms.
 		totalRooms = DOM.rooms.length,
+		prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
 		// Initial transform.
 		initTransform = { translateX : 0, translateY : 0, translateZ : '500px', rotateX : 0, rotateY : 0, rotateZ : 0 },
 		// Reset transform.
@@ -131,6 +132,9 @@
 	}
 
 	function initTilt() {
+		if (prefersReducedMotion) {
+			return;
+		}
 		applyRoomTransition(tiltTransition);
 		tilt = true;
 	}
@@ -202,6 +206,20 @@
 
 		DOM.nav.leftCtrl.addEventListener('click', onNavigatePrevFn);
 		DOM.nav.rightCtrl.addEventListener('click', onNavigateNextFn);
+
+		// Keyboard navigation (accessibility).
+		document.addEventListener('keydown', function(ev) {
+			if (DOM.menuCtrl.classList.contains('btn--active') || DOM.infoCtrl.classList.contains('btn--active')) {
+				return;
+			}
+			if (ev.key === 'ArrowLeft') {
+				ev.preventDefault();
+				onNavigatePrevFn();
+			} else if (ev.key === 'ArrowRight') {
+				ev.preventDefault();
+				onNavigateNextFn();
+			}
+		});
 
 		// Menu click.
 		DOM.menuCtrl.addEventListener('click', toggleMenu);
@@ -476,25 +494,27 @@
 		// Show info text and animate photos out of the walls.
 		var photos = DOM.rooms[currentRoom].querySelectorAll('.room__img');
 		anime.remove(photos);
-		anime({
-			targets: photos,
-			duration: function() {
-				return anime.random(15000, 30000);
-			},
-			easing: [0.3,1,0.3,1],
-			translateY: function() {
-				return anime.random(-50,50);
-			},
-			rotateX: function() {
-				return anime.random(-2,2);
-			},
-			rotateZ: function() {
-				return anime.random(-5,5);
-			},
-			translateZ: function() {
-				return [10,anime.random(50,win.width/3)];
-			}
-		});
+		if (!prefersReducedMotion) {
+			anime({
+				targets: photos,
+				duration: function() {
+					return anime.random(15000, 30000);
+				},
+				easing: [0.3,1,0.3,1],
+				translateY: function() {
+					return anime.random(-50,50);
+				},
+				rotateX: function() {
+					return anime.random(-2,2);
+				},
+				rotateZ: function() {
+					return anime.random(-5,5);
+				},
+				translateZ: function() {
+					return [10,anime.random(50,win.width/3)];
+				}
+			});
+		}
 		// Animate info text and overlay.
 		anime.remove([DOM.infoOverlay, DOM.infoText]);
 		var animeInfoOpts = {
@@ -558,7 +578,7 @@
 
 	// Preload all the images.
 	imagesLoaded(DOM.scroller, function() {
-		var extradelay = 1000;
+		var extradelay = prefersReducedMotion ? 0 : 1000;
 		// Slide out loader.
 		anime({
 			targets: DOM.loader,
